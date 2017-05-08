@@ -58,21 +58,15 @@
 
 <pre><span class="keyword">include</span> <a href="Foldable.S.html">Foldable.S</a></pre>
 
-<pre><span class="keyword">module</span> <a href="Clarity_list.WithA3.html">WithA3</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic3.html">Applicative.Basic3</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S3.html">Traversable.S3</a></code><code class="type">  with
-  type 'a t := 'a t and
-  type ('u, 'v, 'a) f := ('u, 'v, 'a) A.t</code></div></pre>
-<pre><span class="keyword">module</span> <a href="Clarity_list.WithA2.html">WithA2</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic2.html">Applicative.Basic2</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S2.html">Traversable.S2</a></code><code class="type">  with
-  type 'a t := 'a t and
-  type ('u, 'a) f := ('u, 'a) A.t</code></div></pre>
 <pre><span class="keyword">module</span> <a href="Clarity_list.WithA.html">WithA</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic.html">Applicative.Basic</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S.html">Traversable.S</a></code><code class="type">  with
   type 'a t := 'a t and
   type 'a f := 'a A.t</code></div></pre>
-<pre><span class="keyword">module</span> <a href="Clarity_list.WithM3.html">WithM3</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic3.html">Monad.Basic3</a></code><code class="code">) -&gt; </code><code class="type"><a href="Foldable.M3.html">Foldable.M3</a></code><code class="type">  with
+<pre><span class="keyword">module</span> <a href="Clarity_list.WithA2.html">WithA2</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic2.html">Applicative.Basic2</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S2.html">Traversable.S2</a></code><code class="type">  with
   type 'a t := 'a t and
-  type ('u, 'v, 'a) m := ('u, 'v, 'a) M.t</code></div></pre>
-<pre><span class="keyword">module</span> <a href="Clarity_list.WithM2.html">WithM2</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic2.html">Monad.Basic2</a></code><code class="code">) -&gt; </code><code class="type"><a href="Foldable.M2.html">Foldable.M2</a></code><code class="type">  with
+  type ('u, 'a) f := ('u, 'a) A.t</code></div></pre>
+<pre><span class="keyword">module</span> <a href="Clarity_list.WithA3.html">WithA3</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic3.html">Applicative.Basic3</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S3.html">Traversable.S3</a></code><code class="type">  with
   type 'a t := 'a t and
-  type ('u, 'a) m := ('u, 'a) M.t</code></div></pre>
-<pre><span class="keyword">module</span> <a href="Clarity_list.WithM.html">WithM</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic.html">Monad.Basic</a></code><code class="code">) -&gt; </code><code class="type"><a href="Foldable.M.html">Foldable.M</a></code><code class="type">  with
-  type 'a t := 'a t and
-  type 'a m := 'a M.t</code></div></pre></body></html>
+  type ('u, 'v, 'a) f := ('u, 'v, 'a) A.t</code></div></pre>
+<pre><span class="keyword">module</span> <a href="Clarity_list.WithM.html">WithM</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic.html">Monad.Basic</a></code><code class="code">) -&gt; </code><code class="code">sig</code> <a href="Clarity_list.WithM.html">..</a> <code class="code">end</code></div></pre>
+<pre><span class="keyword">module</span> <a href="Clarity_list.WithM2.html">WithM2</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic2.html">Monad.Basic2</a></code><code class="code">) -&gt; </code><code class="code">sig</code> <a href="Clarity_list.WithM2.html">..</a> <code class="code">end</code></div></pre>
+<pre><span class="keyword">module</span> <a href="Clarity_list.WithM3.html">WithM3</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic3.html">Monad.Basic3</a></code><code class="code">) -&gt; </code><code class="code">sig</code> <a href="Clarity_list.WithM3.html">..</a> <code class="code">end</code></div></pre></body></html>
