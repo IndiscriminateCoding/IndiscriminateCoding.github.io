@@ -38,13 +38,28 @@
 </div>
 <h1>Module <a href="type_Semigroup.html">Semigroup</a></h1>
 
-<pre><span class="keyword">module</span> Semigroup: <code class="code">sig</code> <a href="Semigroup.html">..</a> <code class="code">end</code></pre><hr width="100%">
+<pre><span class="keyword">module</span> Semigroup: <code class="code">sig</code> <a href="Semigroup.html">..</a> <code class="code">end</code></pre><div class="info module top">
+Semigroups<br>
+</div>
+<hr width="100%">
 
-<pre><span class="keyword">module type</span> <a href="Semigroup.S.html">S</a> = <code class="code">sig</code> <a href="Semigroup.S.html">..</a> <code class="code">end</code></pre>
+<pre><span class="keyword">module type</span> <a href="Semigroup.S.html">S</a> = <code class="code">sig</code> <a href="Semigroup.S.html">..</a> <code class="code">end</code></pre><div class="info">
+Module-based version
+</div>
+
 <pre><span id="TYPEt"><span class="keyword">type</span> <code class="type">'a</code> t</span> = <code class="type">'a -> 'a -> 'a</code> </pre>
+<div class="info ">
+Value version<br>
+</div>
 
 
-<pre><span id="VALpack"><span class="keyword">val</span> pack</span> : <code class="type">'a <a href="Semigroup.html#TYPEt">t</a> -> (module Semigroup.S with type t = 'a)</code></pre>
-<pre><span id="VALunpack"><span class="keyword">val</span> unpack</span> : <code class="type">(module Semigroup.S with type t = 'a) -> 'a <a href="Semigroup.html#TYPEt">t</a></code></pre>
+<pre><span id="VALpack"><span class="keyword">val</span> pack</span> : <code class="type">'a <a href="Semigroup.html#TYPEt">t</a> -> (module Semigroup.S with type t = 'a)</code></pre><div class="info ">
+Convert value version to first-class module<br>
+</div>
+
+<pre><span id="VALunpack"><span class="keyword">val</span> unpack</span> : <code class="type">(module Semigroup.S with type t = 'a) -> 'a <a href="Semigroup.html#TYPEt">t</a></code></pre><div class="info ">
+Unpack module to value<br>
+</div>
+
 <pre><span id="VALfirst"><span class="keyword">val</span> first</span> : <code class="type">'a <a href="Semigroup.html#TYPEt">t</a></code></pre>
 <pre><span id="VALlast"><span class="keyword">val</span> last</span> : <code class="type">'a <a href="Semigroup.html#TYPEt">t</a></code></pre></body></html>

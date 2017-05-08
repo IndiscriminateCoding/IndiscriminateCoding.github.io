@@ -38,7 +38,10 @@
 </div>
 <h1>Module <a href="type_Fn.html">Fn</a></h1>
 
-<pre><span class="keyword">module</span> Fn: <code class="code">sig</code> <a href="Fn.html">..</a> <code class="code">end</code></pre><hr width="100%">
+<pre><span class="keyword">module</span> Fn: <code class="code">sig</code> <a href="Fn.html">..</a> <code class="code">end</code></pre><div class="info module top">
+Various function combinators<br>
+</div>
+<hr width="100%">
 
 <pre><span id="VALcurry"><span class="keyword">val</span> curry</span> : <code class="type">('a * 'b -> 'c) -> 'a -> 'b -> 'c</code></pre>
 <pre><span id="VALuncurry"><span class="keyword">val</span> uncurry</span> : <code class="type">('a -> 'b -> 'c) -> 'a * 'b -> 'c</code></pre>
@@ -46,5 +49,4 @@
 <pre><span id="VALconst"><span class="keyword">val</span> const</span> : <code class="type">'a -> 'b -> 'a</code></pre>
 <pre><span id="VALcompose"><span class="keyword">val</span> compose</span> : <code class="type">('a -> 'b) -> ('c -> 'a) -> 'c -> 'b</code></pre>
 <pre><span id="VALflip"><span class="keyword">val</span> flip</span> : <code class="type">('a -> 'b -> 'c) -> 'b -> 'a -> 'c</code></pre>
-<pre><span id="VALdefer"><span class="keyword">val</span> defer</span> : <code class="type">('a -> 'b) -> 'a -> 'c -> 'b</code></pre>
-<pre><span id="VAL(@!)"><span class="keyword">val</span> (@!)</span> : <code class="type">('a -> 'b) -> 'a -> 'c -> 'b</code></pre></body></html>
+<pre><span id="VALdefer"><span class="keyword">val</span> defer</span> : <code class="type">('a -> 'b) -> 'a -> 'c -> 'b</code></pre></body></html>

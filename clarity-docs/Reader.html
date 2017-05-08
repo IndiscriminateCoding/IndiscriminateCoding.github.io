@@ -38,7 +38,10 @@
 </div>
 <h1>Module <a href="type_Reader.html">Reader</a></h1>
 
-<pre><span class="keyword">module</span> Reader: <code class="code">sig</code> <a href="Reader.html">..</a> <code class="code">end</code></pre><hr width="100%">
+<pre><span class="keyword">module</span> Reader: <code class="code">sig</code> <a href="Reader.html">..</a> <code class="code">end</code></pre><div class="info module top">
+Reader monad<br>
+</div>
+<hr width="100%">
 
 <pre><span class="keyword">include</span> <a href="Monad.S2.html">Monad.S2</a></pre>
 
@@ -47,4 +50,4 @@
 <pre><span id="VALask"><span class="keyword">val</span> ask</span> : <code class="type">('r, 'r) t</code></pre>
 <pre><span id="VALlocal"><span class="keyword">val</span> local</span> : <code class="type">('r -> 'r) -> ('r, 'a) t -> ('r, 'a) t</code></pre>
 <pre><span id="VALdimap"><span class="keyword">val</span> dimap</span> : <code class="type">('q -> 'r) -> ('a -> 'b) -> ('r, 'a) t -> ('q, 'b) t</code></pre>
-<pre><span id="VALzip"><span class="keyword">val</span> zip</span> : <code class="type">('r, 'b) t -> ('r, 'b) t -> ('r, 'b * 'b) t</code></pre></body></html>
+<pre><span id="VALzip"><span class="keyword">val</span> zip</span> : <code class="type">('r, 'a) t -> ('r, 'b) t -> ('r, 'a * 'b) t</code></pre></body></html>

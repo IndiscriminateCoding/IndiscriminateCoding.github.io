@@ -38,14 +38,29 @@
 </div>
 <h1>Module <a href="type_Monoid.html">Monoid</a></h1>
 
-<pre><span class="keyword">module</span> Monoid: <code class="code">sig</code> <a href="Monoid.html">..</a> <code class="code">end</code></pre><hr width="100%">
+<pre><span class="keyword">module</span> Monoid: <code class="code">sig</code> <a href="Monoid.html">..</a> <code class="code">end</code></pre><div class="info module top">
+Monoids<br>
+</div>
+<hr width="100%">
 
-<pre><span class="keyword">module type</span> <a href="Monoid.S.html">S</a> = <code class="code">sig</code> <a href="Monoid.S.html">..</a> <code class="code">end</code></pre>
+<pre><span class="keyword">module type</span> <a href="Monoid.S.html">S</a> = <code class="code">sig</code> <a href="Monoid.S.html">..</a> <code class="code">end</code></pre><div class="info">
+Module-based version
+</div>
+
 <pre><span id="TYPEt"><span class="keyword">type</span> <code class="type">'a</code> t</span> = <code class="type">('a -> 'a -> 'a) * 'a</code> </pre>
+<div class="info ">
+Value version<br>
+</div>
 
 
-<pre><span id="VALpack"><span class="keyword">val</span> pack</span> : <code class="type">'a <a href="Monoid.html#TYPEt">t</a> -> (module Monoid.S with type t = 'a)</code></pre>
-<pre><span id="VALunpack"><span class="keyword">val</span> unpack</span> : <code class="type">(module Monoid.S with type t = 'a) -> 'a <a href="Monoid.html#TYPEt">t</a></code></pre>
+<pre><span id="VALpack"><span class="keyword">val</span> pack</span> : <code class="type">'a <a href="Monoid.html#TYPEt">t</a> -> (module Monoid.S with type t = 'a)</code></pre><div class="info ">
+Convert value version to first-class module<br>
+</div>
+
+<pre><span id="VALunpack"><span class="keyword">val</span> unpack</span> : <code class="type">(module Monoid.S with type t = 'a) -> 'a <a href="Monoid.html#TYPEt">t</a></code></pre><div class="info ">
+Unpack module to value<br>
+</div>
+
 <pre><span id="VALto_semigroup"><span class="keyword">val</span> to_semigroup</span> : <code class="type">'a <a href="Monoid.html#TYPEt">t</a> -> 'a <a href="Semigroup.html#TYPEt">Semigroup.t</a></code></pre>
 <pre><span id="VALint_min"><span class="keyword">val</span> int_min</span> : <code class="type">int <a href="Monoid.html#TYPEt">t</a></code></pre>
 <pre><span id="VALint_max"><span class="keyword">val</span> int_max</span> : <code class="type">int <a href="Monoid.html#TYPEt">t</a></code></pre>
