@@ -43,7 +43,9 @@ Foldable signatures<br>
 </div>
 <hr width="100%">
 
+<pre><span class="keyword">module type</span> <a href="Foldable.Basic.html">Basic</a> = <code class="code">sig</code> <a href="Foldable.Basic.html">..</a> <code class="code">end</code></pre>
 <pre><span class="keyword">module type</span> <a href="Foldable.S.html">S</a> = <code class="code">sig</code> <a href="Foldable.S.html">..</a> <code class="code">end</code></pre>
+<pre><span class="keyword">module</span> <a href="Foldable.Make.html">Make</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">F</code><code class="code"> : </code><code class="type"><a href="Foldable.Basic.html">Basic</a></code><code class="code">) -&gt; </code><code class="type"><a href="Foldable.S.html">S</a></code><code class="type">  with type 'a t := 'a F.t</code></div></pre>
 <pre><span class="keyword">module type</span> <a href="Foldable.M.html">M</a> = <code class="code">sig</code> <a href="Foldable.M.html">..</a> <code class="code">end</code></pre>
 <pre><span class="keyword">module type</span> <a href="Foldable.M2.html">M2</a> = <code class="code">sig</code> <a href="Foldable.M2.html">..</a> <code class="code">end</code></pre>
 <pre><span class="keyword">module type</span> <a href="Foldable.M3.html">M3</a> = <code class="code">sig</code> <a href="Foldable.M3.html">..</a> <code class="code">end</code></pre></body></html>

@@ -43,6 +43,18 @@ Traversable signatures<br>
 </div>
 <hr width="100%">
 
+<pre><span class="keyword">module type</span> <a href="Traversable.Basic.html">Basic</a> = <code class="code">sig</code> <a href="Traversable.Basic.html">..</a> <code class="code">end</code></pre>
+<pre><span class="keyword">module type</span> <a href="Traversable.Basic2.html">Basic2</a> = <code class="code">sig</code> <a href="Traversable.Basic2.html">..</a> <code class="code">end</code></pre>
+<pre><span class="keyword">module type</span> <a href="Traversable.Basic3.html">Basic3</a> = <code class="code">sig</code> <a href="Traversable.Basic3.html">..</a> <code class="code">end</code></pre>
 <pre><span class="keyword">module type</span> <a href="Traversable.S.html">S</a> = <code class="code">sig</code> <a href="Traversable.S.html">..</a> <code class="code">end</code></pre>
 <pre><span class="keyword">module type</span> <a href="Traversable.S2.html">S2</a> = <code class="code">sig</code> <a href="Traversable.S2.html">..</a> <code class="code">end</code></pre>
-<pre><span class="keyword">module type</span> <a href="Traversable.S3.html">S3</a> = <code class="code">sig</code> <a href="Traversable.S3.html">..</a> <code class="code">end</code></pre></body></html>
+<pre><span class="keyword">module type</span> <a href="Traversable.S3.html">S3</a> = <code class="code">sig</code> <a href="Traversable.S3.html">..</a> <code class="code">end</code></pre>
+<pre><span class="keyword">module</span> <a href="Traversable.Make.html">Make</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">T</code><code class="code"> : </code><code class="type"><a href="Traversable.Basic.html">Basic</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S.html">S</a></code><code class="type">  with
+    type 'a t := 'a T.t and
+    type 'a f := 'a T.f</code></div></pre>
+<pre><span class="keyword">module</span> <a href="Traversable.Make2.html">Make2</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">T</code><code class="code"> : </code><code class="type"><a href="Traversable.Basic2.html">Basic2</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S2.html">S2</a></code><code class="type">  with
+    type 'a t := 'a T.t and
+    type ('u, 'a) f := ('u, 'a) T.f</code></div></pre>
+<pre><span class="keyword">module</span> <a href="Traversable.Make3.html">Make3</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">T</code><code class="code"> : </code><code class="type"><a href="Traversable.Basic3.html">Basic3</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S3.html">S3</a></code><code class="type">  with
+    type 'a t := 'a T.t and
+    type ('u, 'v, 'a) f := ('u, 'v, 'a) T.f</code></div></pre></body></html>

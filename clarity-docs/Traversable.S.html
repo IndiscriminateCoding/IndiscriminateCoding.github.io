@@ -5,6 +5,7 @@
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="Start" href="index.html">
+<link rel="previous" href="Traversable.Basic3.html">
 <link rel="next" href="Traversable.S2.html">
 <link rel="Up" href="Traversable.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
@@ -31,22 +32,17 @@
 <link title="Writer" rel="Chapter" href="Writer.html"><title>Traversable.S</title>
 </head>
 <body>
-<div class="navbar">&nbsp;<a class="up" href="Traversable.html" title="Traversable">Up</a>
+<div class="navbar"><a class="pre" href="Traversable.Basic3.html" title="Traversable.Basic3">Previous</a>
+&nbsp;<a class="up" href="Traversable.html" title="Traversable">Up</a>
 &nbsp;<a class="post" href="Traversable.S2.html" title="Traversable.S2">Next</a>
 </div>
 <h1>Module type <a href="type_Traversable.S.html">Traversable.S</a></h1>
 
 <pre><span class="keyword">module type</span> S = <code class="code">sig</code> <a href="Traversable.S.html">..</a> <code class="code">end</code></pre><hr width="100%">
 
-<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type">'_</code> t</span> </pre>
+<pre><span class="keyword">include</span> <a href="Traversable.Basic.html">Traversable.Basic</a></pre>
 
-
-<pre><span id="TYPEf"><span class="keyword">type</span> <code class="type">'_</code> f</span> </pre>
-
-
-<pre><span id="VALtraverse"><span class="keyword">val</span> traverse</span> : <code class="type">('a -> 'b <a href="Traversable.S.html#TYPEf">f</a>) -><br>       'a <a href="Traversable.S.html#TYPEt">t</a> -> 'b <a href="Traversable.S.html#TYPEt">t</a> <a href="Traversable.S.html#TYPEf">f</a></code></pre>
-<pre><span id="VALsequence"><span class="keyword">val</span> sequence</span> : <code class="type">'a <a href="Traversable.S.html#TYPEf">f</a> <a href="Traversable.S.html#TYPEt">t</a> -> 'a <a href="Traversable.S.html#TYPEt">t</a> <a href="Traversable.S.html#TYPEf">f</a></code></pre>
-<pre><span id="VALforeach"><span class="keyword">val</span> foreach</span> : <code class="type">'a <a href="Traversable.S.html#TYPEt">t</a> -><br>       ('a -> 'b <a href="Traversable.S.html#TYPEf">f</a>) -> 'b <a href="Traversable.S.html#TYPEt">t</a> <a href="Traversable.S.html#TYPEf">f</a></code></pre>
-<pre><span id="VALtraverse_"><span class="keyword">val</span> traverse_</span> : <code class="type">('a -> 'b <a href="Traversable.S.html#TYPEf">f</a>) -> 'a <a href="Traversable.S.html#TYPEt">t</a> -> unit <a href="Traversable.S.html#TYPEf">f</a></code></pre>
-<pre><span id="VALsequence_"><span class="keyword">val</span> sequence_</span> : <code class="type">'a <a href="Traversable.S.html#TYPEf">f</a> <a href="Traversable.S.html#TYPEt">t</a> -> unit <a href="Traversable.S.html#TYPEf">f</a></code></pre>
-<pre><span id="VALforeach_"><span class="keyword">val</span> foreach_</span> : <code class="type">'a <a href="Traversable.S.html#TYPEt">t</a> -> ('a -> 'b <a href="Traversable.S.html#TYPEf">f</a>) -> unit <a href="Traversable.S.html#TYPEf">f</a></code></pre></body></html>
+<pre><span id="VALsequence"><span class="keyword">val</span> sequence</span> : <code class="type">'a f t -> 'a t f</code></pre>
+<pre><span id="VALforeach"><span class="keyword">val</span> foreach</span> : <code class="type">'a t -> ('a -> 'b f) -> 'b t f</code></pre>
+<pre><span id="VALsequence_"><span class="keyword">val</span> sequence_</span> : <code class="type">'a f t -> unit f</code></pre>
+<pre><span id="VALforeach_"><span class="keyword">val</span> foreach_</span> : <code class="type">'a t -> ('a -> 'b f) -> unit f</code></pre></body></html>
