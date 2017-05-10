@@ -56,9 +56,15 @@
 </table>
 <hr width="100%">
 
-<pre><span class="keyword">include</span> <a href="Traversable.Basic2.html">Traversable.Basic2</a></pre>
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type">'_</code> t</span> </pre>
 
-<pre><span id="VALsequence"><span class="keyword">val</span> sequence</span> : <code class="type">('u, 'a) f t -> ('u, 'a t) f</code></pre>
-<pre><span id="VALforeach"><span class="keyword">val</span> foreach</span> : <code class="type">'a t -> ('a -> ('u, 'b) f) -> ('u, 'b t) f</code></pre>
-<pre><span id="VALsequence_"><span class="keyword">val</span> sequence_</span> : <code class="type">('u, 'a) f t -> ('u, unit) f</code></pre>
-<pre><span id="VALforeach_"><span class="keyword">val</span> foreach_</span> : <code class="type">'a t -> ('a -> ('u, 'b) f) -> ('u, unit) f</code></pre></body></html>
+
+<pre><span id="TYPEf"><span class="keyword">type</span> <code class="type">('_, '_)</code> f</span> </pre>
+
+
+<pre><span id="VALtraverse"><span class="keyword">val</span> traverse</span> : <code class="type">('a -> ('u, 'b) <a href="Traversable.S2.html#TYPEf">f</a>) -><br>       'a <a href="Traversable.S2.html#TYPEt">t</a> -> ('u, 'b <a href="Traversable.S2.html#TYPEt">t</a>) <a href="Traversable.S2.html#TYPEf">f</a></code></pre>
+<pre><span id="VALsequence"><span class="keyword">val</span> sequence</span> : <code class="type">('u, 'a) <a href="Traversable.S2.html#TYPEf">f</a> <a href="Traversable.S2.html#TYPEt">t</a> -><br>       ('u, 'a <a href="Traversable.S2.html#TYPEt">t</a>) <a href="Traversable.S2.html#TYPEf">f</a></code></pre>
+<pre><span id="VALforeach"><span class="keyword">val</span> foreach</span> : <code class="type">'a <a href="Traversable.S2.html#TYPEt">t</a> -><br>       ('a -> ('u, 'b) <a href="Traversable.S2.html#TYPEf">f</a>) -><br>       ('u, 'b <a href="Traversable.S2.html#TYPEt">t</a>) <a href="Traversable.S2.html#TYPEf">f</a></code></pre>
+<pre><span id="VALtraverse_"><span class="keyword">val</span> traverse_</span> : <code class="type">('a -> ('u, 'b) <a href="Traversable.S2.html#TYPEf">f</a>) -><br>       'a <a href="Traversable.S2.html#TYPEt">t</a> -> ('u, unit) <a href="Traversable.S2.html#TYPEf">f</a></code></pre>
+<pre><span id="VALsequence_"><span class="keyword">val</span> sequence_</span> : <code class="type">('u, 'a) <a href="Traversable.S2.html#TYPEf">f</a> <a href="Traversable.S2.html#TYPEt">t</a> -> ('u, unit) <a href="Traversable.S2.html#TYPEf">f</a></code></pre>
+<pre><span id="VALforeach_"><span class="keyword">val</span> foreach_</span> : <code class="type">'a <a href="Traversable.S2.html#TYPEt">t</a> -><br>       ('a -> ('u, 'b) <a href="Traversable.S2.html#TYPEf">f</a>) -> ('u, unit) <a href="Traversable.S2.html#TYPEf">f</a></code></pre></body></html>

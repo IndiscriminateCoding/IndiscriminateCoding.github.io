@@ -38,9 +38,15 @@
 
 <pre><span class="keyword">module type</span> S3 = <code class="code">sig</code> <a href="Traversable.S3.html">..</a> <code class="code">end</code></pre><hr width="100%">
 
-<pre><span class="keyword">include</span> <a href="Traversable.Basic3.html">Traversable.Basic3</a></pre>
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type">'_</code> t</span> </pre>
 
-<pre><span id="VALsequence"><span class="keyword">val</span> sequence</span> : <code class="type">('a, 'b, 'c) f t -> ('a, 'b, 'c t) f</code></pre>
-<pre><span id="VALforeach"><span class="keyword">val</span> foreach</span> : <code class="type">'a t -> ('a -> ('b, 'c, 'd) f) -> ('b, 'c, 'd t) f</code></pre>
-<pre><span id="VALsequence_"><span class="keyword">val</span> sequence_</span> : <code class="type">('a, 'b, 'c) f t -> ('a, 'b, unit) f</code></pre>
-<pre><span id="VALforeach_"><span class="keyword">val</span> foreach_</span> : <code class="type">'a t -> ('a -> ('b, 'c, 'd) f) -> ('b, 'c, unit) f</code></pre></body></html>
+
+<pre><span id="TYPEf"><span class="keyword">type</span> <code class="type">('_, '_, '_)</code> f</span> </pre>
+
+
+<pre><span id="VALtraverse"><span class="keyword">val</span> traverse</span> : <code class="type">('a -> ('u, 'v, 'b) <a href="Traversable.S3.html#TYPEf">f</a>) -><br>       'a <a href="Traversable.S3.html#TYPEt">t</a> -> ('u, 'v, 'b <a href="Traversable.S3.html#TYPEt">t</a>) <a href="Traversable.S3.html#TYPEf">f</a></code></pre>
+<pre><span id="VALsequence"><span class="keyword">val</span> sequence</span> : <code class="type">('a, 'b, 'c) <a href="Traversable.S3.html#TYPEf">f</a> <a href="Traversable.S3.html#TYPEt">t</a> -><br>       ('a, 'b, 'c <a href="Traversable.S3.html#TYPEt">t</a>) <a href="Traversable.S3.html#TYPEf">f</a></code></pre>
+<pre><span id="VALforeach"><span class="keyword">val</span> foreach</span> : <code class="type">'a <a href="Traversable.S3.html#TYPEt">t</a> -><br>       ('a -> ('b, 'c, 'd) <a href="Traversable.S3.html#TYPEf">f</a>) -><br>       ('b, 'c, 'd <a href="Traversable.S3.html#TYPEt">t</a>) <a href="Traversable.S3.html#TYPEf">f</a></code></pre>
+<pre><span id="VALtraverse_"><span class="keyword">val</span> traverse_</span> : <code class="type">('a -> ('u, 'v, 'b) <a href="Traversable.S3.html#TYPEf">f</a>) -><br>       'a <a href="Traversable.S3.html#TYPEt">t</a> -> ('u, 'v, unit) <a href="Traversable.S3.html#TYPEf">f</a></code></pre>
+<pre><span id="VALsequence_"><span class="keyword">val</span> sequence_</span> : <code class="type">('a, 'b, 'c) <a href="Traversable.S3.html#TYPEf">f</a> <a href="Traversable.S3.html#TYPEt">t</a> -><br>       ('a, 'b, unit) <a href="Traversable.S3.html#TYPEf">f</a></code></pre>
+<pre><span id="VALforeach_"><span class="keyword">val</span> foreach_</span> : <code class="type">'a <a href="Traversable.S3.html#TYPEt">t</a> -><br>       ('a -> ('b, 'c, 'd) <a href="Traversable.S3.html#TYPEf">f</a>) -> ('b, 'c, unit) <a href="Traversable.S3.html#TYPEf">f</a></code></pre></body></html>
