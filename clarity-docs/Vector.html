@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Validation.html">
+<link rel="next" href="Void.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Align" rel="Chapter" href="Align.html">
+<link title="Applicative" rel="Chapter" href="Applicative.html">
+<link title="Clarity_list" rel="Chapter" href="Clarity_list.html">
+<link title="Either" rel="Chapter" href="Either.html">
+<link title="Fn" rel="Chapter" href="Fn.html">
+<link title="Foldable" rel="Chapter" href="Foldable.html">
+<link title="Functor" rel="Chapter" href="Functor.html">
+<link title="Id" rel="Chapter" href="Id.html">
+<link title="Monad" rel="Chapter" href="Monad.html">
+<link title="Monoid" rel="Chapter" href="Monoid.html">
+<link title="Option" rel="Chapter" href="Option.html">
+<link title="Reader" rel="Chapter" href="Reader.html">
+<link title="Semigroup" rel="Chapter" href="Semigroup.html">
+<link title="State" rel="Chapter" href="State.html">
+<link title="These" rel="Chapter" href="These.html">
+<link title="Traversable" rel="Chapter" href="Traversable.html">
+<link title="Validation" rel="Chapter" href="Validation.html">
+<link title="Vector" rel="Chapter" href="Vector.html">
+<link title="Void" rel="Chapter" href="Void.html">
+<link title="Writer" rel="Chapter" href="Writer.html"><title>Vector</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Validation.html" title="Validation">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Void.html" title="Void">Next</a>
+</div>
+<h1>Module <a href="type_Vector.html">Vector</a></h1>
+
+<pre><span class="keyword">module</span> Vector: <code class="code">sig</code> <a href="Vector.html">..</a> <code class="code">end</code></pre><div class="info module top">
+Efficient persistent vectors based on RRB-Trees
+<p>
+
+ RRB (Relaxed Radix-Balanced) Trees allows "effectively constant"
+  operations like getting element / updating at index, appending and
+  splitting.<br>
+</div>
+<hr width="100%">
+
+<pre><span class="keyword">module</span> <a href="Vector.Internal.html">Internal</a>: <code class="code">sig</code> <a href="Vector.Internal.html">..</a> <code class="code">end</code></pre><div class="info">
+This module is for internal use only; don't use it outside of Clarity
+</div>
+
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type">'a</code> t</span> = <code class="type">'a <a href="Vector.Internal.html#TYPEt">Internal.t</a></code> </pre>
+
+
+<pre><span id="EXCEPTIONOut_of_bounds"><span class="keyword">exception</span> Out_of_bounds</span> <span class="keyword">of</span> <code>{</code><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTVector.Out_of_bounds.index">index</span>&nbsp;: <code class="type">int</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTVector.Out_of_bounds.size">size</span>&nbsp;: <code class="type">int</code>;</code></td>
+
+</tr></table>
+}
+</pre>
+
+<pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type">'a <a href="Vector.html#TYPEt">t</a></code></pre><div class="info ">
+Empty vector.<br>
+</div>
+
+<pre><span id="VALlength"><span class="keyword">val</span> length</span> : <code class="type">'a <a href="Vector.html#TYPEt">t</a> -> int</code></pre><div class="info ">
+The length of a vector.<br>
+</div>
+
+<pre><span id="VALinit"><span class="keyword">val</span> init</span> : <code class="type">int -> (int -> 'a) -> 'a <a href="Vector.html#TYPEt">t</a></code></pre><div class="info ">
+<code class="code">init l f</code> creates vector of length <code class="code">l</code> where value at position <code class="code">i</code> is
+  initialized with <code class="code">f i</code>.<br>
+</div>
+
+<pre><span id="VALappend"><span class="keyword">val</span> append</span> : <code class="type">'a <a href="Vector.html#TYPEt">t</a> -> 'a <a href="Vector.html#TYPEt">t</a> -> 'a <a href="Vector.html#TYPEt">t</a></code></pre><div class="info ">
+Concatenates two vectors. "Effectively constant".<br>
+</div>
+
+<pre><span id="VALget"><span class="keyword">val</span> get</span> : <code class="type">'a <a href="Vector.html#TYPEt">t</a> -> int -> 'a</code></pre><div class="info ">
+<code class="code">get v i</code> returns the element of a <code class="code">v</code> at position <code class="code">i</code>. "Effectively
+  constant".
+<p>
+
+  Raise <code class="code">Out_of_bounds</code> when <code class="code">i</code> is outside of <code class="code">v</code> bounds.<br>
+</div>
+
+<pre><span id="VALupdate"><span class="keyword">val</span> update</span> : <code class="type">'a <a href="Vector.html#TYPEt">t</a> -> int -> 'a -> 'a <a href="Vector.html#TYPEt">t</a></code></pre><div class="info ">
+<code class="code">update v i x</code> returns new vector initialized with values of <code class="code">v</code> where
+  value at index <code class="code">i</code> is replaced with <code class="code">x</code>. "Effectively constant".
+<p>
+
+  Raise <code class="code">Out_of_bounds</code> when <code class="code">i</code> is outside of <code class="code">v</code> bounds.<br>
+</div>
+
+<pre><span id="VALsplit_at"><span class="keyword">val</span> split_at</span> : <code class="type">'a <a href="Vector.html#TYPEt">t</a> -> int -> 'a <a href="Vector.html#TYPEt">t</a> * 'a <a href="Vector.html#TYPEt">t</a></code></pre><div class="info ">
+<code class="code">split_at v i</code> returns pair of a vectors where first element is the prefix
+  of <code class="code">v</code> of length <code class="code">i</code> and second is the suffix of <code class="code">v</code> starting at <code class="code">i</code>.
+  "Effectively constant".
+<p>
+
+  Raise <code class="code">Out_of_bounds</code> when <code class="code">i</code> is outside of <code class="code">v</code> bounds.<br>
+</div>
+
+<pre><span id="VALtake"><span class="keyword">val</span> take</span> : <code class="type">'a <a href="Vector.html#TYPEt">t</a> -> int -> 'a <a href="Vector.html#TYPEt">t</a></code></pre><div class="info ">
+<code class="code">take v i</code> returns the prefix of <code class="code">v</code> of length <code class="code">i</code>. "Effectively
+  constant".
+<p>
+
+  Raise <code class="code">Out_of_bounds</code> when <code class="code">i</code> is outside of <code class="code">v</code> bounds.<br>
+</div>
+
+<pre><span id="VALdrop"><span class="keyword">val</span> drop</span> : <code class="type">'a <a href="Vector.html#TYPEt">t</a> -> int -> 'a <a href="Vector.html#TYPEt">t</a></code></pre><div class="info ">
+<code class="code">drop v i</code> returns the suffix of <code class="code">v</code> starting at <code class="code">i</code>. "Effectively
+  constant".
+<p>
+
+  Raise <code class="code">Out_of_bounds</code> when <code class="code">i</code> is outside of <code class="code">v</code> bounds.<br>
+</div>
+
+<pre><span id="VALiter"><span class="keyword">val</span> iter</span> : <code class="type">('a -> unit) -> 'a <a href="Vector.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
+<code class="code">iter f v</code> iterates over <code class="code">v</code> applying <code class="code">f</code> to each element.<br>
+</div>
+
+<pre><span id="VALof_list"><span class="keyword">val</span> of_list</span> : <code class="type">'a list -> 'a <a href="Vector.html#TYPEt">t</a></code></pre><div class="info ">
+Converts list to vector<br>
+</div>
+
+<pre><span id="VALto_list"><span class="keyword">val</span> to_list</span> : <code class="type">'a <a href="Vector.html#TYPEt">t</a> -> 'a list</code></pre><div class="info ">
+Converts vector to list<br>
+</div>
+
+<pre><span class="keyword">include</span> <a href="Monad.S.html">Monad.S</a></pre>
+
+<pre><span class="keyword">include</span> <a href="Foldable.S.html">Foldable.S</a></pre>
+
+<pre><span class="keyword">include</span> <a href="Align.S.html">Align.S</a></pre>
+
+<pre><span class="keyword">module</span> <a href="Vector.WithA.html">WithA</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic.html">Applicative.Basic</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S.html">Traversable.S</a></code><code class="type">  with
+  type 'a t := 'a t and
+  type 'a f := 'a A.t</code></div></pre>
+<pre><span class="keyword">module</span> <a href="Vector.WithA2.html">WithA2</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic2.html">Applicative.Basic2</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S2.html">Traversable.S2</a></code><code class="type">  with
+  type 'a t := 'a t and
+  type ('u, 'a) f := ('u, 'a) A.t</code></div></pre>
+<pre><span class="keyword">module</span> <a href="Vector.WithA3.html">WithA3</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic3.html">Applicative.Basic3</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S3.html">Traversable.S3</a></code><code class="type">  with
+  type 'a t := 'a t and
+  type ('u, 'v, 'a) f := ('u, 'v, 'a) A.t</code></div></pre>
+<pre><span class="keyword">module</span> <a href="Vector.WithM.html">WithM</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic.html">Monad.Basic</a></code><code class="code">) -&gt; </code><code class="code">sig</code> <a href="Vector.WithM.html">..</a> <code class="code">end</code></div></pre>
+<pre><span class="keyword">module</span> <a href="Vector.WithM2.html">WithM2</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic2.html">Monad.Basic2</a></code><code class="code">) -&gt; </code><code class="code">sig</code> <a href="Vector.WithM2.html">..</a> <code class="code">end</code></div></pre>
+<pre><span class="keyword">module</span> <a href="Vector.WithM3.html">WithM3</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic3.html">Monad.Basic3</a></code><code class="code">) -&gt; </code><code class="code">sig</code> <a href="Vector.WithM3.html">..</a> <code class="code">end</code></div></pre></body></html>

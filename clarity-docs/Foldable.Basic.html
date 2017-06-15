@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="next" href="Foldable.S.html">
+<link rel="Up" href="Foldable.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Align" rel="Chapter" href="Align.html">
+<link title="Applicative" rel="Chapter" href="Applicative.html">
+<link title="Clarity_list" rel="Chapter" href="Clarity_list.html">
+<link title="Either" rel="Chapter" href="Either.html">
+<link title="Fn" rel="Chapter" href="Fn.html">
+<link title="Foldable" rel="Chapter" href="Foldable.html">
+<link title="Functor" rel="Chapter" href="Functor.html">
+<link title="Id" rel="Chapter" href="Id.html">
+<link title="Monad" rel="Chapter" href="Monad.html">
+<link title="Monoid" rel="Chapter" href="Monoid.html">
+<link title="Option" rel="Chapter" href="Option.html">
+<link title="Reader" rel="Chapter" href="Reader.html">
+<link title="Semigroup" rel="Chapter" href="Semigroup.html">
+<link title="State" rel="Chapter" href="State.html">
+<link title="These" rel="Chapter" href="These.html">
+<link title="Traversable" rel="Chapter" href="Traversable.html">
+<link title="Validation" rel="Chapter" href="Validation.html">
+<link title="Vector" rel="Chapter" href="Vector.html">
+<link title="Void" rel="Chapter" href="Void.html">
+<link title="Writer" rel="Chapter" href="Writer.html"><title>Foldable.Basic</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="Foldable.html" title="Foldable">Up</a>
+&nbsp;<a class="post" href="Foldable.S.html" title="Foldable.S">Next</a>
+</div>
+<h1>Module type <a href="type_Foldable.Basic.html">Foldable.Basic</a></h1>
+
+<pre><span class="keyword">module type</span> Basic = <code class="code">sig</code> <a href="Foldable.Basic.html">..</a> <code class="code">end</code></pre><hr width="100%">
+
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type">'_</code> t</span> </pre>
+
+
+<pre><span id="VALfoldl"><span class="keyword">val</span> foldl</span> : <code class="type">('a -> 'b -> 'a) -> 'a -> 'b <a href="Foldable.Basic.html#TYPEt">t</a> -> 'a</code></pre>
+<pre><span id="VALfoldr"><span class="keyword">val</span> foldr</span> : <code class="type">('a -> (unit -> 'b) -> 'b) -> (unit -> 'b) -> 'a <a href="Foldable.Basic.html#TYPEt">t</a> -> 'b</code></pre></body></html>
