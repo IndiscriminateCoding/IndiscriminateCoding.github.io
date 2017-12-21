@@ -36,11 +36,19 @@
 <h1>Index of values</h1>
 <table>
 <tr><td align="left"><br></td></tr>
+<tr><td><a href="Fn.html#VAL(%)">(%)</a> [<a href="Fn.html">Fn</a>]</td>
+<td></td></tr>
 <tr><td><a href="Applicative.S3.html#VAL(<*>)">(&lt;*&gt;)</a> [<a href="Applicative.S3.html">Applicative.S3</a>]</td>
 <td></td></tr>
 <tr><td><a href="Applicative.S2.html#VAL(<*>)">(&lt;*&gt;)</a> [<a href="Applicative.S2.html">Applicative.S2</a>]</td>
 <td></td></tr>
 <tr><td><a href="Applicative.S.html#VAL(<*>)">(&lt;*&gt;)</a> [<a href="Applicative.S.html">Applicative.S</a>]</td>
+<td></td></tr>
+<tr><td><a href="Applicative.S3.html#VAL(<~>)">(&lt;~&gt;)</a> [<a href="Applicative.S3.html">Applicative.S3</a>]</td>
+<td></td></tr>
+<tr><td><a href="Applicative.S2.html#VAL(<~>)">(&lt;~&gt;)</a> [<a href="Applicative.S2.html">Applicative.S2</a>]</td>
+<td></td></tr>
+<tr><td><a href="Applicative.S.html#VAL(<~>)">(&lt;~&gt;)</a> [<a href="Applicative.S.html">Applicative.S</a>]</td>
 <td></td></tr>
 <tr><td><a href="Monad.S3.html#VAL(>>=)">(&gt;&gt;=)</a> [<a href="Monad.S3.html">Monad.S3</a>]</td>
 <td></td></tr>
@@ -53,10 +61,6 @@
 <tr><td><a href="Functor.S2.html#VAL(>|=)">(&gt;|=)</a> [<a href="Functor.S2.html">Functor.S2</a>]</td>
 <td></td></tr>
 <tr><td><a href="Functor.S.html#VAL(>|=)">(&gt;|=)</a> [<a href="Functor.S.html">Functor.S</a>]</td>
-<td></td></tr>
-<tr><td><a href="Vector.Internal.html#VAL_BITS">_BITS</a> [<a href="Vector.Internal.html">Vector.Internal</a>]</td>
-<td></td></tr>
-<tr><td><a href="Vector.Internal.html#VAL_BRANCHING">_BRANCHING</a> [<a href="Vector.Internal.html">Vector.Internal</a>]</td>
 <td></td></tr>
 <tr><td><a href="These.html#VAL_Both">_Both</a> [<a href="These.html">These</a>]</td>
 <td></td></tr>
@@ -95,11 +99,7 @@ Since Void.t values don't exist, it's logically possible to create value
 <td></td></tr>
 <tr><td><a href="Align.Basic.html#VALalign_with">align_with</a> [<a href="Align.Basic.html">Align.Basic</a>]</td>
 <td></td></tr>
-<tr><td><a href="Monoid.html#VALall">all</a> [<a href="Monoid.html">Monoid</a>]</td>
-<td></td></tr>
 <tr><td><a href="Foldable.S.html#VALall">all</a> [<a href="Foldable.S.html">Foldable.S</a>]</td>
-<td></td></tr>
-<tr><td><a href="Monoid.html#VALany">any</a> [<a href="Monoid.html">Monoid</a>]</td>
 <td></td></tr>
 <tr><td><a href="Foldable.S.html#VALany">any</a> [<a href="Foldable.S.html">Foldable.S</a>]</td>
 <td></td></tr>
@@ -108,6 +108,12 @@ Since Void.t values don't exist, it's logically possible to create value
 <tr><td><a href="Applicative.Basic2.html#VALap">ap</a> [<a href="Applicative.Basic2.html">Applicative.Basic2</a>]</td>
 <td></td></tr>
 <tr><td><a href="Applicative.Basic.html#VALap">ap</a> [<a href="Applicative.Basic.html">Applicative.Basic</a>]</td>
+<td></td></tr>
+<tr><td><a href="Applicative.S3.html#VALap'">ap'</a> [<a href="Applicative.S3.html">Applicative.S3</a>]</td>
+<td></td></tr>
+<tr><td><a href="Applicative.S2.html#VALap'">ap'</a> [<a href="Applicative.S2.html">Applicative.S2</a>]</td>
+<td></td></tr>
+<tr><td><a href="Applicative.S.html#VALap'">ap'</a> [<a href="Applicative.S.html">Applicative.S</a>]</td>
 <td></td></tr>
 <tr><td><a href="Vector.html#VALappend">append</a> [<a href="Vector.html">Vector</a>]</td>
 <td><div class="info">
@@ -145,8 +151,6 @@ Concatenates two vectors.
 <tr><td align="left"><br>D</td></tr>
 <tr><td><a href="Fn.html#VALdefer">defer</a> [<a href="Fn.html">Fn</a>]</td>
 <td></td></tr>
-<tr><td><a href="Vector.Internal.html#VALdepth">depth</a> [<a href="Vector.Internal.html">Vector.Internal</a>]</td>
-<td></td></tr>
 <tr><td><a href="Reader.html#VALdimap">dimap</a> [<a href="Reader.html">Reader</a>]</td>
 <td></td></tr>
 <tr><td><a href="Applicative.S3.html#VALdiscard_left">discard_left</a> [<a href="Applicative.S3.html">Applicative.S3</a>]</td>
@@ -172,16 +176,18 @@ Concatenates two vectors.
 Empty vector.
 </div>
 </td></tr>
-<tr><td><a href="Monoid.html#VALendo">endo</a> [<a href="Monoid.html">Monoid</a>]</td>
-<td></td></tr>
 <tr><td align="left"><br>F</td></tr>
 <tr><td><a href="Validation.Make.html#VALfail">fail</a> [<a href="Validation.Make.html">Validation.Make</a>]</td>
 <td></td></tr>
+<tr><td><a href="Align.S3.html#VALfalign">falign</a> [<a href="Align.S3.html">Align.S3</a>]</td>
+<td></td></tr>
+<tr><td><a href="Align.S2.html#VALfalign">falign</a> [<a href="Align.S2.html">Align.S2</a>]</td>
+<td></td></tr>
+<tr><td><a href="Align.S.html#VALfalign">falign</a> [<a href="Align.S.html">Align.S</a>]</td>
+<td></td></tr>
 <tr><td><a href="Clarity_list.html#VALfilter">filter</a> [<a href="Clarity_list.html">Clarity_list</a>]</td>
 <td></td></tr>
-<tr><td><a href="Clarity_list.html#VALfind">find</a> [<a href="Clarity_list.html">Clarity_list</a>]</td>
-<td></td></tr>
-<tr><td><a href="Semigroup.html#VALfirst">first</a> [<a href="Semigroup.html">Semigroup</a>]</td>
+<tr><td><a href="Foldable.S.html#VALfind">find</a> [<a href="Foldable.S.html">Foldable.S</a>]</td>
 <td></td></tr>
 <tr><td><a href="Fn.html#VALflip">flip</a> [<a href="Fn.html">Fn</a>]</td>
 <td></td></tr>
@@ -205,23 +211,13 @@ Empty vector.
 <td></td></tr>
 <tr><td><a href="Foldable.Basic.html#VALfoldr">foldr</a> [<a href="Foldable.Basic.html">Foldable.Basic</a>]</td>
 <td></td></tr>
+<tr><td><a href="Foldable.S.html#VALfoldr'">foldr'</a> [<a href="Foldable.S.html">Foldable.S</a>]</td>
+<td></td></tr>
 <tr><td><a href="Foldable.M3.html#VALfoldr_m">foldr_m</a> [<a href="Foldable.M3.html">Foldable.M3</a>]</td>
 <td></td></tr>
 <tr><td><a href="Foldable.M2.html#VALfoldr_m">foldr_m</a> [<a href="Foldable.M2.html">Foldable.M2</a>]</td>
 <td></td></tr>
 <tr><td><a href="Foldable.M.html#VALfoldr_m">foldr_m</a> [<a href="Foldable.M.html">Foldable.M</a>]</td>
-<td></td></tr>
-<tr><td><a href="Traversable.S3.html#VALforeach">foreach</a> [<a href="Traversable.S3.html">Traversable.S3</a>]</td>
-<td></td></tr>
-<tr><td><a href="Traversable.S2.html#VALforeach">foreach</a> [<a href="Traversable.S2.html">Traversable.S2</a>]</td>
-<td></td></tr>
-<tr><td><a href="Traversable.S.html#VALforeach">foreach</a> [<a href="Traversable.S.html">Traversable.S</a>]</td>
-<td></td></tr>
-<tr><td><a href="Traversable.S3.html#VALforeach_">foreach_</a> [<a href="Traversable.S3.html">Traversable.S3</a>]</td>
-<td></td></tr>
-<tr><td><a href="Traversable.S2.html#VALforeach_">foreach_</a> [<a href="Traversable.S2.html">Traversable.S2</a>]</td>
-<td></td></tr>
-<tr><td><a href="Traversable.S.html#VALforeach_">foreach_</a> [<a href="Traversable.S.html">Traversable.S</a>]</td>
 <td></td></tr>
 <tr><td><a href="Applicative.S3.html#VALforever">forever</a> [<a href="Applicative.S3.html">Applicative.S3</a>]</td>
 <td></td></tr>
@@ -248,14 +244,6 @@ Empty vector.
   initialized with <code class="code">f i</code>.
 </div>
 </td></tr>
-<tr><td><a href="Monoid.html#VALint_max">int_max</a> [<a href="Monoid.html">Monoid</a>]</td>
-<td></td></tr>
-<tr><td><a href="Monoid.html#VALint_min">int_min</a> [<a href="Monoid.html">Monoid</a>]</td>
-<td></td></tr>
-<tr><td><a href="Monoid.html#VALint_prod">int_prod</a> [<a href="Monoid.html">Monoid</a>]</td>
-<td></td></tr>
-<tr><td><a href="Monoid.html#VALint_sum">int_sum</a> [<a href="Monoid.html">Monoid</a>]</td>
-<td></td></tr>
 <tr><td><a href="Clarity_list.html#VALintersperse">intersperse</a> [<a href="Clarity_list.html">Clarity_list</a>]</td>
 <td></td></tr>
 <tr><td><a href="Vector.html#VALiter">iter</a> [<a href="Vector.html">Vector</a>]</td>
@@ -273,16 +261,12 @@ Empty vector.
 <tr><td><a href="Monad.S.html#VALjoin">join</a> [<a href="Monad.S.html">Monad.S</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>L</td></tr>
-<tr><td><a href="Semigroup.html#VALlast">last</a> [<a href="Semigroup.html">Semigroup</a>]</td>
-<td></td></tr>
 <tr><td><a href="Vector.html#VALlength">length</a> [<a href="Vector.html">Vector</a>]</td>
 <td><div class="info">
 The length of a vector.
 </div>
 </td></tr>
 <tr><td><a href="Clarity_list.html#VALlength">length</a> [<a href="Clarity_list.html">Clarity_list</a>]</td>
-<td></td></tr>
-<tr><td><a href="Monoid.html#VALlist">list</a> [<a href="Monoid.html">Monoid</a>]</td>
 <td></td></tr>
 <tr><td><a href="Writer.Make.html#VALlisten">listen</a> [<a href="Writer.Make.html">Writer.Make</a>]</td>
 <td></td></tr>
@@ -319,8 +303,6 @@ The length of a vector.
 <td></td></tr>
 <tr><td><a href="Monad.S.html#VALmcompose">mcompose</a> [<a href="Monad.S.html">Monad.S</a>]</td>
 <td></td></tr>
-<tr><td><a href="Vector.Internal.html#VALmk_rnode">mk_rnode</a> [<a href="Vector.Internal.html">Vector.Internal</a>]</td>
-<td></td></tr>
 <tr><td><a href="State.html#VALmodify">modify</a> [<a href="State.html">State</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>O</td></tr>
@@ -331,19 +313,7 @@ The length of a vector.
 Converts list to vector
 </div>
 </td></tr>
-<tr><td><a href="Monoid.html#VALoption">option</a> [<a href="Monoid.html">Monoid</a>]</td>
-<td></td></tr>
 <tr><td align="left"><br>P</td></tr>
-<tr><td><a href="Semigroup.html#VALpack">pack</a> [<a href="Semigroup.html">Semigroup</a>]</td>
-<td><div class="info">
-Convert value version to first-class module
-</div>
-</td></tr>
-<tr><td><a href="Monoid.html#VALpack">pack</a> [<a href="Monoid.html">Monoid</a>]</td>
-<td><div class="info">
-Convert value version to first-class module
-</div>
-</td></tr>
 <tr><td><a href="Align.S3.html#VALpad_zip">pad_zip</a> [<a href="Align.S3.html">Align.S3</a>]</td>
 <td></td></tr>
 <tr><td><a href="Align.S2.html#VALpad_zip">pad_zip</a> [<a href="Align.S2.html">Align.S2</a>]</td>
@@ -355,8 +325,6 @@ Convert value version to first-class module
 <tr><td><a href="Align.S2.html#VALpad_zip_with">pad_zip_with</a> [<a href="Align.S2.html">Align.S2</a>]</td>
 <td></td></tr>
 <tr><td><a href="Align.S.html#VALpad_zip_with">pad_zip_with</a> [<a href="Align.S.html">Align.S</a>]</td>
-<td></td></tr>
-<tr><td><a href="Monoid.html#VALpair">pair</a> [<a href="Monoid.html">Monoid</a>]</td>
 <td></td></tr>
 <tr><td><a href="Applicative.Basic3.html#VALpure">pure</a> [<a href="Applicative.Basic3.html">Applicative.Basic3</a>]</td>
 <td></td></tr>
@@ -395,8 +363,6 @@ Convert value version to first-class module
 <td></td></tr>
 <tr><td><a href="Clarity_list.html#VALrev_mapi">rev_mapi</a> [<a href="Clarity_list.html">Clarity_list</a>]</td>
 <td></td></tr>
-<tr><td><a href="Vector.Internal.html#VALrr_search">rr_search</a> [<a href="Vector.Internal.html">Vector.Internal</a>]</td>
-<td></td></tr>
 <tr><td><a href="Writer.Make.html#VALrun">run</a> [<a href="Writer.Make.html">Writer.Make</a>]</td>
 <td></td></tr>
 <tr><td><a href="State.html#VALrun">run</a> [<a href="State.html">State</a>]</td>
@@ -404,12 +370,6 @@ Convert value version to first-class module
 <tr><td><a href="Reader.html#VALrun">run</a> [<a href="Reader.html">Reader</a>]</td>
 <td></td></tr>
 <tr><td align="left"><br>S</td></tr>
-<tr><td><a href="Align.S3.html#VALsalign">salign</a> [<a href="Align.S3.html">Align.S3</a>]</td>
-<td></td></tr>
-<tr><td><a href="Align.S2.html#VALsalign">salign</a> [<a href="Align.S2.html">Align.S2</a>]</td>
-<td></td></tr>
-<tr><td><a href="Align.S.html#VALsalign">salign</a> [<a href="Align.S.html">Align.S</a>]</td>
-<td></td></tr>
 <tr><td><a href="Traversable.S3.html#VALsequence">sequence</a> [<a href="Traversable.S3.html">Traversable.S3</a>]</td>
 <td></td></tr>
 <tr><td><a href="Traversable.S2.html#VALsequence">sequence</a> [<a href="Traversable.S2.html">Traversable.S2</a>]</td>
@@ -436,13 +396,7 @@ Stable sort with supplied comparision function, default is
 </td></tr>
 <tr><td><a href="State.html#VALstate">state</a> [<a href="State.html">State</a>]</td>
 <td></td></tr>
-<tr><td><a href="Foldable.S.html#VALsuml">suml</a> [<a href="Foldable.S.html">Foldable.S</a>]</td>
-<td></td></tr>
-<tr><td><a href="Foldable.S.html#VALsumr">sumr</a> [<a href="Foldable.S.html">Foldable.S</a>]</td>
-<td></td></tr>
 <tr><td><a href="These.html#VALswap">swap</a> [<a href="These.html">These</a>]</td>
-<td></td></tr>
-<tr><td><a href="Monoid.html#VALswap">swap</a> [<a href="Monoid.html">Monoid</a>]</td>
 <td></td></tr>
 <tr><td><a href="Either.html#VALswap">swap</a> [<a href="Either.html">Either</a>]</td>
 <td></td></tr>
@@ -461,8 +415,6 @@ Stable sort with supplied comparision function, default is
 Converts vector to list
 </div>
 </td></tr>
-<tr><td><a href="Monoid.html#VALto_semigroup">to_semigroup</a> [<a href="Monoid.html">Monoid</a>]</td>
-<td></td></tr>
 <tr><td><a href="Traversable.Basic3.html#VALtraverse">traverse</a> [<a href="Traversable.Basic3.html">Traversable.Basic3</a>]</td>
 <td></td></tr>
 <tr><td><a href="Traversable.Basic2.html#VALtraverse">traverse</a> [<a href="Traversable.Basic2.html">Traversable.Basic2</a>]</td>
@@ -478,16 +430,6 @@ Converts vector to list
 <tr><td align="left"><br>U</td></tr>
 <tr><td><a href="Fn.html#VALuncurry">uncurry</a> [<a href="Fn.html">Fn</a>]</td>
 <td></td></tr>
-<tr><td><a href="Semigroup.html#VALunpack">unpack</a> [<a href="Semigroup.html">Semigroup</a>]</td>
-<td><div class="info">
-Unpack module to value
-</div>
-</td></tr>
-<tr><td><a href="Monoid.html#VALunpack">unpack</a> [<a href="Monoid.html">Monoid</a>]</td>
-<td><div class="info">
-Unpack module to value
-</div>
-</td></tr>
 <tr><td><a href="Vector.html#VALupdate">update</a> [<a href="Vector.html">Vector</a>]</td>
 <td><div class="info">
 <code class="code">update v i x</code> returns new vector initialized with values of <code class="code">v</code> where

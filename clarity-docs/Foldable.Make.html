@@ -55,8 +55,8 @@
 
 <pre><span class="keyword">include</span> <a href="Foldable.Basic.html">Foldable.Basic</a></pre>
 
-<pre><span id="VALfold_map"><span class="keyword">val</span> fold_map</span> : <code class="type">'a <a href="Monoid.html#TYPEt">Monoid.t</a> -> ('a -> 'a) -> 'a t -> 'a</code></pre>
-<pre><span id="VALsuml"><span class="keyword">val</span> suml</span> : <code class="type">'a <a href="Monoid.html#TYPEt">Monoid.t</a> -> 'a t -> 'a</code></pre>
-<pre><span id="VALsumr"><span class="keyword">val</span> sumr</span> : <code class="type">'a <a href="Monoid.html#TYPEt">Monoid.t</a> -> 'a t -> 'a</code></pre>
+<pre><span id="VALfoldr'"><span class="keyword">val</span> foldr'</span> : <code class="type">('a -> 'b -> 'b) -> 'b -> 'a t -> 'b</code></pre>
+<pre><span id="VALfold_map"><span class="keyword">val</span> fold_map</span> : <code class="type">(module Monoid.S with type t = 'm) -> ('a -> 'm) -> 'a t -> 'm</code></pre>
 <pre><span id="VALany"><span class="keyword">val</span> any</span> : <code class="type">('a -> bool) -> 'a t -> bool</code></pre>
-<pre><span id="VALall"><span class="keyword">val</span> all</span> : <code class="type">('a -> bool) -> 'a t -> bool</code></pre></body></html>
+<pre><span id="VALall"><span class="keyword">val</span> all</span> : <code class="type">('a -> bool) -> 'a t -> bool</code></pre>
+<pre><span id="VALfind"><span class="keyword">val</span> find</span> : <code class="type">('a -> bool) -> 'a t -> 'a option</code></pre></body></html>

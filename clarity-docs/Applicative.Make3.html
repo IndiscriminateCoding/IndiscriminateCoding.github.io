@@ -62,7 +62,9 @@
 
 <pre><span class="keyword">include</span> <a href="Functor.S3.html">Functor.S3</a></pre>
 
-<pre><span id="VAL(<*>)"><span class="keyword">val</span> (&lt;*&gt;)</span> : <code class="type">('p, 'q, 'a -> 'b) <a href="Applicative.S3.html#TYPEt">t</a> -><br>       (unit -> ('p, 'q, 'a) <a href="Applicative.S3.html#TYPEt">t</a>) -> ('p, 'q, 'b) <a href="Applicative.S3.html#TYPEt">t</a></code></pre>
+<pre><span id="VALap'"><span class="keyword">val</span> ap'</span> : <code class="type">('p, 'q, 'a -> 'b) <a href="Applicative.S3.html#TYPEt">t</a> -><br>       ('p, 'q, 'a) <a href="Applicative.S3.html#TYPEt">t</a> -> ('p, 'q, 'b) <a href="Applicative.S3.html#TYPEt">t</a></code></pre>
+<pre><span id="VAL(<*>)"><span class="keyword">val</span> (&lt;*&gt;)</span> : <code class="type">('p, 'q, 'a -> 'b) <a href="Applicative.S3.html#TYPEt">t</a> -><br>       ('p, 'q, 'a) <a href="Applicative.S3.html#TYPEt">t</a> -> ('p, 'q, 'b) <a href="Applicative.S3.html#TYPEt">t</a></code></pre>
+<pre><span id="VAL(<~>)"><span class="keyword">val</span> (&lt;~&gt;)</span> : <code class="type">('p, 'q, 'a -> 'b) <a href="Applicative.S3.html#TYPEt">t</a> -><br>       (unit -> ('p, 'q, 'a) <a href="Applicative.S3.html#TYPEt">t</a>) -> ('p, 'q, 'b) <a href="Applicative.S3.html#TYPEt">t</a></code></pre>
 <pre><span id="VALdiscard_left"><span class="keyword">val</span> discard_left</span> : <code class="type">('p, 'q, 'a) <a href="Applicative.S3.html#TYPEt">t</a> -><br>       (unit -> ('p, 'q, 'b) <a href="Applicative.S3.html#TYPEt">t</a>) -> ('p, 'q, 'b) <a href="Applicative.S3.html#TYPEt">t</a></code></pre>
 <pre><span id="VALdiscard_right"><span class="keyword">val</span> discard_right</span> : <code class="type">('p, 'q, 'a) <a href="Applicative.S3.html#TYPEt">t</a> -><br>       (unit -> ('p, 'q, 'b) <a href="Applicative.S3.html#TYPEt">t</a>) -> ('p, 'q, 'a) <a href="Applicative.S3.html#TYPEt">t</a></code></pre>
 <pre><span id="VALrepeat"><span class="keyword">val</span> repeat</span> : <code class="type">int -> ('p, 'q, 'a) <a href="Applicative.S3.html#TYPEt">t</a> -> ('p, 'q, 'a list) <a href="Applicative.S3.html#TYPEt">t</a></code></pre>

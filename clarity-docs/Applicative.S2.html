@@ -50,7 +50,9 @@
 
 <pre><span class="keyword">include</span> <a href="Functor.S2.html">Functor.S2</a></pre>
 
-<pre><span id="VAL(<*>)"><span class="keyword">val</span> (&lt;*&gt;)</span> : <code class="type">('p, 'a -> 'b) <a href="Applicative.S2.html#TYPEt">t</a> -><br>       (unit -> ('p, 'a) <a href="Applicative.S2.html#TYPEt">t</a>) -> ('p, 'b) <a href="Applicative.S2.html#TYPEt">t</a></code></pre>
+<pre><span id="VALap'"><span class="keyword">val</span> ap'</span> : <code class="type">('p, 'a -> 'b) <a href="Applicative.S2.html#TYPEt">t</a> -><br>       ('p, 'a) <a href="Applicative.S2.html#TYPEt">t</a> -> ('p, 'b) <a href="Applicative.S2.html#TYPEt">t</a></code></pre>
+<pre><span id="VAL(<*>)"><span class="keyword">val</span> (&lt;*&gt;)</span> : <code class="type">('p, 'a -> 'b) <a href="Applicative.S2.html#TYPEt">t</a> -><br>       ('p, 'a) <a href="Applicative.S2.html#TYPEt">t</a> -> ('p, 'b) <a href="Applicative.S2.html#TYPEt">t</a></code></pre>
+<pre><span id="VAL(<~>)"><span class="keyword">val</span> (&lt;~&gt;)</span> : <code class="type">('p, 'a -> 'b) <a href="Applicative.S2.html#TYPEt">t</a> -><br>       (unit -> ('p, 'a) <a href="Applicative.S2.html#TYPEt">t</a>) -> ('p, 'b) <a href="Applicative.S2.html#TYPEt">t</a></code></pre>
 <pre><span id="VALdiscard_left"><span class="keyword">val</span> discard_left</span> : <code class="type">('p, 'a) <a href="Applicative.S2.html#TYPEt">t</a> -><br>       (unit -> ('p, 'b) <a href="Applicative.S2.html#TYPEt">t</a>) -> ('p, 'b) <a href="Applicative.S2.html#TYPEt">t</a></code></pre>
 <pre><span id="VALdiscard_right"><span class="keyword">val</span> discard_right</span> : <code class="type">('p, 'a) <a href="Applicative.S2.html#TYPEt">t</a> -><br>       (unit -> ('p, 'b) <a href="Applicative.S2.html#TYPEt">t</a>) -> ('p, 'a) <a href="Applicative.S2.html#TYPEt">t</a></code></pre>
 <pre><span id="VALrepeat"><span class="keyword">val</span> repeat</span> : <code class="type">int -> ('p, 'a) <a href="Applicative.S2.html#TYPEt">t</a> -> ('p, 'a list) <a href="Applicative.S2.html#TYPEt">t</a></code></pre>

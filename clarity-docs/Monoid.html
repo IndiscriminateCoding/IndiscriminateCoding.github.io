@@ -46,33 +46,14 @@ Monoids<br>
 </div>
 <hr width="100%">
 
-<pre><span class="keyword">module type</span> <a href="Monoid.S.html">S</a> = <code class="code">sig</code> <a href="Monoid.S.html">..</a> <code class="code">end</code></pre><div class="info">
-Module-based version
-</div>
+<pre><span class="keyword">module type</span> <a href="Monoid.S.html">S</a> = <code class="code">sig</code> <a href="Monoid.S.html">..</a> <code class="code">end</code></pre>
+<pre><span class="keyword">module</span> <a href="Monoid.Int.html">Int</a>: <code class="code">sig</code> <a href="Monoid.Int.html">..</a> <code class="code">end</code></pre>
+<pre><span class="keyword">module</span> <a href="Monoid.All.html">All</a>: <code class="type"><a href="Monoid.S.html">S</a></code><code class="type">  with type t = bool</code></pre>
+<pre><span class="keyword">module</span> <a href="Monoid.Any.html">Any</a>: <code class="type"><a href="Monoid.S.html">S</a></code><code class="type">  with type t = bool</code></pre>
+<pre><span class="keyword">module</span> <a href="Monoid.Dual.html">Dual</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monoid.S.html">S</a></code><code class="code">) -&gt; </code><code class="type"><a href="Monoid.S.html">S</a></code><code class="type">  with type t = M.t</code></div></pre>
+<pre><span class="keyword">module</span> <a href="Monoid.Endo.html">Endo</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">T</code><code class="code"> : </code><code class="code">sig</code><div class="sig_block">
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
 
-<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type">'a</code> t</span> = <code class="type">('a -> 'a -> 'a) * 'a</code> </pre>
-<div class="info ">
-Value version<br>
-</div>
-
-
-<pre><span id="VALpack"><span class="keyword">val</span> pack</span> : <code class="type">'a <a href="Monoid.html#TYPEt">t</a> -> (module Monoid.S with type t = 'a)</code></pre><div class="info ">
-Convert value version to first-class module<br>
-</div>
-
-<pre><span id="VALunpack"><span class="keyword">val</span> unpack</span> : <code class="type">(module Monoid.S with type t = 'a) -> 'a <a href="Monoid.html#TYPEt">t</a></code></pre><div class="info ">
-Unpack module to value<br>
-</div>
-
-<pre><span id="VALto_semigroup"><span class="keyword">val</span> to_semigroup</span> : <code class="type">'a <a href="Monoid.html#TYPEt">t</a> -> 'a <a href="Semigroup.html#TYPEt">Semigroup.t</a></code></pre>
-<pre><span id="VALint_min"><span class="keyword">val</span> int_min</span> : <code class="type">int <a href="Monoid.html#TYPEt">t</a></code></pre>
-<pre><span id="VALint_max"><span class="keyword">val</span> int_max</span> : <code class="type">int <a href="Monoid.html#TYPEt">t</a></code></pre>
-<pre><span id="VALint_sum"><span class="keyword">val</span> int_sum</span> : <code class="type">int <a href="Monoid.html#TYPEt">t</a></code></pre>
-<pre><span id="VALint_prod"><span class="keyword">val</span> int_prod</span> : <code class="type">int <a href="Monoid.html#TYPEt">t</a></code></pre>
-<pre><span id="VALswap"><span class="keyword">val</span> swap</span> : <code class="type">'a <a href="Monoid.html#TYPEt">t</a> -> 'a <a href="Monoid.html#TYPEt">t</a></code></pre>
-<pre><span id="VALendo"><span class="keyword">val</span> endo</span> : <code class="type">('a -> 'a) <a href="Monoid.html#TYPEt">t</a></code></pre>
-<pre><span id="VALpair"><span class="keyword">val</span> pair</span> : <code class="type">'a <a href="Monoid.html#TYPEt">t</a> -> 'b <a href="Monoid.html#TYPEt">t</a> -> ('a * 'b) <a href="Monoid.html#TYPEt">t</a></code></pre>
-<pre><span id="VALall"><span class="keyword">val</span> all</span> : <code class="type">bool <a href="Monoid.html#TYPEt">t</a></code></pre>
-<pre><span id="VALany"><span class="keyword">val</span> any</span> : <code class="type">bool <a href="Monoid.html#TYPEt">t</a></code></pre>
-<pre><span id="VALlist"><span class="keyword">val</span> list</span> : <code class="type">'a list <a href="Monoid.html#TYPEt">t</a></code></pre>
-<pre><span id="VALoption"><span class="keyword">val</span> option</span> : <code class="type">'a <a href="Semigroup.html#TYPEt">Semigroup.t</a> -> 'a option <a href="Monoid.html#TYPEt">t</a></code></pre></body></html>
+</div><code class="code">end</code><code class="code">) -&gt; </code><code class="type"><a href="Monoid.S.html">S</a></code><code class="type">  with type t = T.t -> T.t</code></div></pre>
+<pre><span class="keyword">module</span> <a href="Monoid.Pair.html">Pair</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">M1</code><code class="code"> : </code><code class="type"><a href="Monoid.S.html">S</a></code><code class="code">) -&gt; </code><div class="sig_block"><code class="code">functor (</code><code class="code">M2</code><code class="code"> : </code><code class="type"><a href="Monoid.S.html">S</a></code><code class="code">) -&gt; </code><code class="type"><a href="Monoid.S.html">S</a></code><code class="type">  with type t = M1.t * M2.t</code></div></div></pre>
+<pre><span class="keyword">module</span> <a href="Monoid.Opt.html">Opt</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">S</code><code class="code"> : </code><code class="type"><a href="Semigroup.S.html">Semigroup.S</a></code><code class="code">) -&gt; </code><code class="type"><a href="Monoid.S.html">S</a></code><code class="type">  with type t = S.t option</code></div></pre></body></html>
