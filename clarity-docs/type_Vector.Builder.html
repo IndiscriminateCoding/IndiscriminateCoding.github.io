@@ -27,12 +27,15 @@
 <link title="Validation" rel="Chapter" href="Validation.html">
 <link title="Vector" rel="Chapter" href="Vector.html">
 <link title="Void" rel="Chapter" href="Void.html">
-<link title="Writer" rel="Chapter" href="Writer.html"><title>Applicative.Basic</title>
+<link title="Writer" rel="Chapter" href="Writer.html"><title>Vector.Builder</title>
 </head>
 <body>
 <code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;vector&nbsp;=&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Vector</span>.t<br>
 &nbsp;&nbsp;<span class="keyword">type</span>&nbsp;_&nbsp;t<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;map&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b&nbsp;t<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;pure&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;t<br>
-&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;ap&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b)&nbsp;t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;t)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>b&nbsp;t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Vector</span>.<span class="constructor">Builder</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;copy&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Vector</span>.<span class="constructor">Builder</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Vector</span>.<span class="constructor">Builder</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;put&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Vector</span>.<span class="constructor">Builder</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;clear&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Vector</span>.<span class="constructor">Builder</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;result&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Vector</span>.<span class="constructor">Builder</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Vector</span>.<span class="constructor">Builder</span>.vector<br>
 <span class="keyword">end</span></code></body></html>

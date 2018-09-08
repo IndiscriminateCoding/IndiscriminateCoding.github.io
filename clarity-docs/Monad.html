@@ -41,17 +41,19 @@
 </div>
 <h1>Module <a href="type_Monad.html">Monad</a></h1>
 
-<pre><span class="keyword">module</span> Monad: <code class="code">sig</code> <a href="Monad.html">..</a> <code class="code">end</code></pre><div class="info module top">
-Monads<br>
+<pre><span id="MODULEMonad"><span class="keyword">module</span> Monad</span>: <code class="code">sig</code> <a href="Monad.html">..</a> <code class="code">end</code></pre><div class="info module top">
+<div class="info-desc">
+<p>Monads</p>
+</div>
 </div>
 <hr width="100%">
 
-<pre><span class="keyword">module type</span> <a href="Monad.Basic.html">Basic</a> = <code class="code">sig</code> <a href="Monad.Basic.html">..</a> <code class="code">end</code></pre>
-<pre><span class="keyword">module type</span> <a href="Monad.Basic2.html">Basic2</a> = <code class="code">sig</code> <a href="Monad.Basic2.html">..</a> <code class="code">end</code></pre>
-<pre><span class="keyword">module type</span> <a href="Monad.Basic3.html">Basic3</a> = <code class="code">sig</code> <a href="Monad.Basic3.html">..</a> <code class="code">end</code></pre>
-<pre><span class="keyword">module type</span> <a href="Monad.S.html">S</a> = <code class="code">sig</code> <a href="Monad.S.html">..</a> <code class="code">end</code></pre>
-<pre><span class="keyword">module type</span> <a href="Monad.S2.html">S2</a> = <code class="code">sig</code> <a href="Monad.S2.html">..</a> <code class="code">end</code></pre>
-<pre><span class="keyword">module type</span> <a href="Monad.S3.html">S3</a> = <code class="code">sig</code> <a href="Monad.S3.html">..</a> <code class="code">end</code></pre>
-<pre><span class="keyword">module</span> <a href="Monad.Make.html">Make</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic.html">Basic</a></code><code class="code">) -&gt; </code><code class="type"><a href="Monad.S.html">S</a></code><code class="type">  with type 'a t := 'a M.t</code></div></pre>
-<pre><span class="keyword">module</span> <a href="Monad.Make2.html">Make2</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic2.html">Basic2</a></code><code class="code">) -&gt; </code><code class="type"><a href="Monad.S2.html">S2</a></code><code class="type">  with type ('p, 'a) t := ('p, 'a) M.t</code></div></pre>
-<pre><span class="keyword">module</span> <a href="Monad.Make3.html">Make3</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic3.html">Basic3</a></code><code class="code">) -&gt; </code><code class="type"><a href="Monad.S3.html">S3</a></code><code class="type">  with type ('p, 'q, 'a) t := ('p, 'q, 'a) M.t</code></div></pre></body></html>
+<pre><span id="MODULETYPEBasic"><span class="keyword">module type</span> <a href="Monad.Basic.html">Basic</a></span> = <code class="code">sig</code> <a href="Monad.Basic.html">..</a> <code class="code">end</code></pre>
+<pre><span id="MODULETYPEBasic2"><span class="keyword">module type</span> <a href="Monad.Basic2.html">Basic2</a></span> = <code class="code">sig</code> <a href="Monad.Basic2.html">..</a> <code class="code">end</code></pre>
+<pre><span id="MODULETYPEBasic3"><span class="keyword">module type</span> <a href="Monad.Basic3.html">Basic3</a></span> = <code class="code">sig</code> <a href="Monad.Basic3.html">..</a> <code class="code">end</code></pre>
+<pre><span id="MODULETYPES"><span class="keyword">module type</span> <a href="Monad.S.html">S</a></span> = <code class="code">sig</code> <a href="Monad.S.html">..</a> <code class="code">end</code></pre>
+<pre><span id="MODULETYPES2"><span class="keyword">module type</span> <a href="Monad.S2.html">S2</a></span> = <code class="code">sig</code> <a href="Monad.S2.html">..</a> <code class="code">end</code></pre>
+<pre><span id="MODULETYPES3"><span class="keyword">module type</span> <a href="Monad.S3.html">S3</a></span> = <code class="code">sig</code> <a href="Monad.S3.html">..</a> <code class="code">end</code></pre>
+<pre><span id="MODULEMake"><span class="keyword">module</span> <a href="Monad.Make.html">Make</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic.html">Basic</a></code><code class="code">) -&gt; </code><code class="type"><a href="Monad.S.html">S</a></code><code class="type">  with type 'a t := 'a M.t</code></div></pre>
+<pre><span id="MODULEMake2"><span class="keyword">module</span> <a href="Monad.Make2.html">Make2</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic2.html">Basic2</a></code><code class="code">) -&gt; </code><code class="type"><a href="Monad.S2.html">S2</a></code><code class="type">  with type ('p, 'a) t := ('p, 'a) M.t</code></div></pre>
+<pre><span id="MODULEMake3"><span class="keyword">module</span> <a href="Monad.Make3.html">Make3</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic3.html">Basic3</a></code><code class="code">) -&gt; </code><code class="type"><a href="Monad.S3.html">S3</a></code><code class="type">  with type ('p, 'q, 'a) t := ('p, 'q, 'a) M.t</code></div></pre></body></html>

@@ -41,18 +41,24 @@
 </div>
 <h1>Module <a href="type_Vector.html">Vector</a></h1>
 
-<pre><span class="keyword">module</span> Vector: <code class="code">sig</code> <a href="Vector.html">..</a> <code class="code">end</code></pre><div class="info module top">
-Efficient persistent vectors based on RRB-Trees
-<p>
+<pre><span id="MODULEVector"><span class="keyword">module</span> Vector</span>: <code class="code">sig</code> <a href="Vector.html">..</a> <code class="code">end</code></pre><div class="info module top">
+<div class="info-desc">
+<p>Efficient persistent vectors based on RRB-Trees</p>
 
- RRB (Relaxed Radix-Balanced) Trees allows "effectively constant"
+<p>RRB (Relaxed Radix-Balanced) Trees allows "effectively constant"
   operations like getting element / updating at index, appending and
-  splitting.<br>
+  splitting.</p>
+</div>
 </div>
 <hr width="100%">
 
-<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type">'a</code> t</span> </pre>
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type">'_</code> t</span> </pre>
 
+
+<pre><span id="MODULEBuilder"><span class="keyword">module</span> <a href="Vector.Builder.html">Builder</a></span>: <code class="code">sig</code> <a href="Vector.Builder.html">..</a> <code class="code">end</code></pre><div class="info">
+<p>Efficient construction of vectors using mutable, one-by-one appending of elements</p>
+
+</div>
 
 <pre><span id="EXCEPTIONOut_of_bounds"><span class="keyword">exception</span> Out_of_bounds</span> <span class="keyword">of</span> <code>{</code><table class="typetable">
 <tr>
@@ -73,73 +79,104 @@ Efficient persistent vectors based on RRB-Trees
 </pre>
 
 <pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type">'a <a href="Vector.html#TYPEt">t</a></code></pre><div class="info ">
-Empty vector.<br>
+<div class="info-desc">
+<p>Empty vector.</p>
+</div>
+</div>
+
+<pre><span id="VALcons"><span class="keyword">val</span> cons</span> : <code class="type">'a -> 'a <a href="Vector.html#TYPEt">t</a> -> 'a <a href="Vector.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p>Prepend one element to vector. "Effectively constant".</p>
+</div>
+</div>
+
+<pre><span id="VALsnoc"><span class="keyword">val</span> snoc</span> : <code class="type">'a <a href="Vector.html#TYPEt">t</a> -> 'a -> 'a <a href="Vector.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p>Apppend one element to vector. "Effectively constant".</p>
+</div>
 </div>
 
 <pre><span id="VALlength"><span class="keyword">val</span> length</span> : <code class="type">'a <a href="Vector.html#TYPEt">t</a> -> int</code></pre><div class="info ">
-The length of a vector.<br>
+<div class="info-desc">
+<p>The length of a vector.</p>
+</div>
 </div>
 
 <pre><span id="VALinit"><span class="keyword">val</span> init</span> : <code class="type">int -> (int -> 'a) -> 'a <a href="Vector.html#TYPEt">t</a></code></pre><div class="info ">
-<code class="code">init l f</code> creates vector of length <code class="code">l</code> where value at position <code class="code">i</code> is
-  initialized with <code class="code">f i</code>.<br>
+<div class="info-desc">
+<p><code class="code">init l f</code> creates vector of length <code class="code">l</code> where value at position <code class="code">i</code> is
+  initialized with <code class="code">f i</code>.</p>
+</div>
 </div>
 
 <pre><span id="VALappend"><span class="keyword">val</span> append</span> : <code class="type">'a <a href="Vector.html#TYPEt">t</a> -> 'a <a href="Vector.html#TYPEt">t</a> -> 'a <a href="Vector.html#TYPEt">t</a></code></pre><div class="info ">
-Concatenates two vectors. "Effectively constant".<br>
+<div class="info-desc">
+<p>Concatenates two vectors. "Effectively constant".</p>
+</div>
 </div>
 
 <pre><span id="VALget"><span class="keyword">val</span> get</span> : <code class="type">'a <a href="Vector.html#TYPEt">t</a> -> int -> 'a</code></pre><div class="info ">
-<code class="code">get v i</code> returns the element of a <code class="code">v</code> at position <code class="code">i</code>. "Effectively
-  constant".
-<p>
+<div class="info-desc">
+<p><code class="code">get v i</code> returns the element of a <code class="code">v</code> at position <code class="code">i</code>. "Effectively
+  constant".</p>
 
-  Raise <code class="code">Out_of_bounds</code> when <code class="code">i</code> is outside of <code class="code">v</code> bounds.<br>
+<p>Raise <code class="code">Out_of_bounds</code> when <code class="code">i</code> is outside of <code class="code">v</code> bounds.</p>
+</div>
 </div>
 
 <pre><span id="VALupdate"><span class="keyword">val</span> update</span> : <code class="type">'a <a href="Vector.html#TYPEt">t</a> -> int -> 'a -> 'a <a href="Vector.html#TYPEt">t</a></code></pre><div class="info ">
-<code class="code">update v i x</code> returns new vector initialized with values of <code class="code">v</code> where
-  value at index <code class="code">i</code> is replaced with <code class="code">x</code>. "Effectively constant".
-<p>
+<div class="info-desc">
+<p><code class="code">update v i x</code> returns new vector initialized with values of <code class="code">v</code> where
+  value at index <code class="code">i</code> is replaced with <code class="code">x</code>. "Effectively constant".</p>
 
-  Raise <code class="code">Out_of_bounds</code> when <code class="code">i</code> is outside of <code class="code">v</code> bounds.<br>
+<p>Raise <code class="code">Out_of_bounds</code> when <code class="code">i</code> is outside of <code class="code">v</code> bounds.</p>
+</div>
 </div>
 
 <pre><span id="VALsplit_at"><span class="keyword">val</span> split_at</span> : <code class="type">'a <a href="Vector.html#TYPEt">t</a> -> int -> 'a <a href="Vector.html#TYPEt">t</a> * 'a <a href="Vector.html#TYPEt">t</a></code></pre><div class="info ">
-<code class="code">split_at v i</code> returns pair of a vectors where first element is the prefix
+<div class="info-desc">
+<p><code class="code">split_at v i</code> returns pair of a vectors where first element is the prefix
   of <code class="code">v</code> of length <code class="code">i</code> and second is the suffix of <code class="code">v</code> starting at <code class="code">i</code>.
-  "Effectively constant".
-<p>
+  "Effectively constant".</p>
 
-  Raise <code class="code">Out_of_bounds</code> when <code class="code">i</code> is negative.<br>
+<p>Raise <code class="code">Out_of_bounds</code> when <code class="code">i</code> is negative.</p>
+</div>
 </div>
 
 <pre><span id="VALtake"><span class="keyword">val</span> take</span> : <code class="type">'a <a href="Vector.html#TYPEt">t</a> -> int -> 'a <a href="Vector.html#TYPEt">t</a></code></pre><div class="info ">
-<code class="code">take v i</code> returns the prefix of <code class="code">v</code> of length <code class="code">i</code>. "Effectively
-  constant".
-<p>
+<div class="info-desc">
+<p><code class="code">take v i</code> returns the prefix of <code class="code">v</code> of length <code class="code">i</code>. "Effectively
+  constant".</p>
 
-  Raise <code class="code">Out_of_bounds</code> when <code class="code">i</code> is negative.<br>
+<p>Raise <code class="code">Out_of_bounds</code> when <code class="code">i</code> is negative.</p>
+</div>
 </div>
 
 <pre><span id="VALdrop"><span class="keyword">val</span> drop</span> : <code class="type">'a <a href="Vector.html#TYPEt">t</a> -> int -> 'a <a href="Vector.html#TYPEt">t</a></code></pre><div class="info ">
-<code class="code">drop v i</code> returns the suffix of <code class="code">v</code> starting at <code class="code">i</code>. "Effectively
-  constant".
-<p>
+<div class="info-desc">
+<p><code class="code">drop v i</code> returns the suffix of <code class="code">v</code> starting at <code class="code">i</code>. "Effectively
+  constant".</p>
 
-  Raise <code class="code">Out_of_bounds</code> when <code class="code">i</code> is negative.<br>
+<p>Raise <code class="code">Out_of_bounds</code> when <code class="code">i</code> is negative.</p>
+</div>
 </div>
 
 <pre><span id="VALiter"><span class="keyword">val</span> iter</span> : <code class="type">('a -> unit) -> 'a <a href="Vector.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
-<code class="code">iter f v</code> iterates over <code class="code">v</code> applying <code class="code">f</code> to each element.<br>
+<div class="info-desc">
+<p><code class="code">iter f v</code> iterates over <code class="code">v</code> applying <code class="code">f</code> to each element.</p>
+</div>
 </div>
 
 <pre><span id="VALof_list"><span class="keyword">val</span> of_list</span> : <code class="type">'a list -> 'a <a href="Vector.html#TYPEt">t</a></code></pre><div class="info ">
-Converts list to vector<br>
+<div class="info-desc">
+<p>Converts list to vector</p>
+</div>
 </div>
 
 <pre><span id="VALto_list"><span class="keyword">val</span> to_list</span> : <code class="type">'a <a href="Vector.html#TYPEt">t</a> -> 'a list</code></pre><div class="info ">
-Converts vector to list<br>
+<div class="info-desc">
+<p>Converts vector to list</p>
+</div>
 </div>
 
 <pre><span class="keyword">include</span> <a href="Monad.S.html">Monad.S</a></pre>
@@ -148,15 +185,15 @@ Converts vector to list<br>
 
 <pre><span class="keyword">include</span> <a href="Align.S.html">Align.S</a></pre>
 
-<pre><span class="keyword">module</span> <a href="Vector.A.html">A</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic.html">Applicative.Basic</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S.html">Traversable.S</a></code><code class="type">  with
+<pre><span id="MODULEA"><span class="keyword">module</span> <a href="Vector.A.html">A</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic.html">Applicative.Basic</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S.html">Traversable.S</a></code><code class="type">  with
   type 'a t := 'a t and
   type 'a f := 'a A.t</code></div></pre>
-<pre><span class="keyword">module</span> <a href="Vector.A2.html">A2</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic2.html">Applicative.Basic2</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S2.html">Traversable.S2</a></code><code class="type">  with
+<pre><span id="MODULEA2"><span class="keyword">module</span> <a href="Vector.A2.html">A2</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic2.html">Applicative.Basic2</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S2.html">Traversable.S2</a></code><code class="type">  with
   type 'a t := 'a t and
   type ('u, 'a) f := ('u, 'a) A.t</code></div></pre>
-<pre><span class="keyword">module</span> <a href="Vector.A3.html">A3</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic3.html">Applicative.Basic3</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S3.html">Traversable.S3</a></code><code class="type">  with
+<pre><span id="MODULEA3"><span class="keyword">module</span> <a href="Vector.A3.html">A3</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic3.html">Applicative.Basic3</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S3.html">Traversable.S3</a></code><code class="type">  with
   type 'a t := 'a t and
   type ('u, 'v, 'a) f := ('u, 'v, 'a) A.t</code></div></pre>
-<pre><span class="keyword">module</span> <a href="Vector.M.html">M</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic.html">Monad.Basic</a></code><code class="code">) -&gt; </code><code class="code">sig</code> <a href="Vector.M.html">..</a> <code class="code">end</code></div></pre>
-<pre><span class="keyword">module</span> <a href="Vector.M2.html">M2</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic2.html">Monad.Basic2</a></code><code class="code">) -&gt; </code><code class="code">sig</code> <a href="Vector.M2.html">..</a> <code class="code">end</code></div></pre>
-<pre><span class="keyword">module</span> <a href="Vector.M3.html">M3</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic3.html">Monad.Basic3</a></code><code class="code">) -&gt; </code><code class="code">sig</code> <a href="Vector.M3.html">..</a> <code class="code">end</code></div></pre></body></html>
+<pre><span id="MODULEM"><span class="keyword">module</span> <a href="Vector.M.html">M</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic.html">Monad.Basic</a></code><code class="code">) -&gt; </code><code class="code">sig</code> <a href="Vector.M.html">..</a> <code class="code">end</code></div></pre>
+<pre><span id="MODULEM2"><span class="keyword">module</span> <a href="Vector.M2.html">M2</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic2.html">Monad.Basic2</a></code><code class="code">) -&gt; </code><code class="code">sig</code> <a href="Vector.M2.html">..</a> <code class="code">end</code></div></pre>
+<pre><span id="MODULEM3"><span class="keyword">module</span> <a href="Vector.M3.html">M3</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic3.html">Monad.Basic3</a></code><code class="code">) -&gt; </code><code class="code">sig</code> <a href="Vector.M3.html">..</a> <code class="code">end</code></div></pre></body></html>

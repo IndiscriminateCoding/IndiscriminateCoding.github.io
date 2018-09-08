@@ -5,6 +5,7 @@
 <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="Start" href="index.html">
+<link rel="previous" href="Vector.Builder.html">
 <link rel="next" href="Vector.A2.html">
 <link rel="Up" href="Vector.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
@@ -34,12 +35,13 @@
 <link title="Writer" rel="Chapter" href="Writer.html"><title>Vector.A</title>
 </head>
 <body>
-<div class="navbar">&nbsp;<a class="up" href="Vector.html" title="Vector">Up</a>
+<div class="navbar"><a class="pre" href="Vector.Builder.html" title="Vector.Builder">Previous</a>
+&nbsp;<a class="up" href="Vector.html" title="Vector">Up</a>
 &nbsp;<a class="post" href="Vector.A2.html" title="Vector.A2">Next</a>
 </div>
 <h1>Functor <a href="type_Vector.A.html">Vector.A</a></h1>
 
-<pre><span class="keyword">module</span> A: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic.html">Applicative.Basic</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S.html">Traversable.S</a></code><code class="type">  with
+<pre><span id="MODULEA"><span class="keyword">module</span> A</span>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic.html">Applicative.Basic</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S.html">Traversable.S</a></code><code class="type">  with
   type 'a t := 'a t and
   type 'a f := 'a A.t</code></div></pre><table border="0" cellpadding="3" width="100%">
 <tr>

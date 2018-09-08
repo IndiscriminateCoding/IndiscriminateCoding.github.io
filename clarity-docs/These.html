@@ -41,8 +41,10 @@
 </div>
 <h1>Module <a href="type_These.html">These</a></h1>
 
-<pre><span class="keyword">module</span> These: <code class="code">sig</code> <a href="These.html">..</a> <code class="code">end</code></pre><div class="info module top">
-Values of two non-exclusive variants<br>
+<pre><span id="MODULEThese"><span class="keyword">module</span> These</span>: <code class="code">sig</code> <a href="These.html">..</a> <code class="code">end</code></pre><div class="info module top">
+<div class="info-desc">
+<p>Values of two non-exclusive variants</p>
+</div>
 </div>
 <hr width="100%">
 
@@ -74,8 +76,9 @@ Values of two non-exclusive variants<br>
 <pre><span id="VAL_Left"><span class="keyword">val</span> _Left</span> : <code class="type">'a -> ('a, 'b) <a href="These.html#TYPEt">t</a></code></pre>
 <pre><span id="VAL_Right"><span class="keyword">val</span> _Right</span> : <code class="type">'a -> ('b, 'a) <a href="These.html#TYPEt">t</a></code></pre>
 <pre><span id="VAL_Both"><span class="keyword">val</span> _Both</span> : <code class="type">'a -> 'b -> ('a, 'b) <a href="These.html#TYPEt">t</a></code></pre>
-<pre><span class="keyword">module</span> <a href="These.Make.html">Make</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">S</code><code class="code"> : </code><code class="type"><a href="Semigroup.S.html">Semigroup.S</a></code><code class="code">) -&gt; </code><code class="type"><a href="Monad.S.html">Monad.S</a></code><code class="type">  with type 'a t = (S.t, 'a) t</code></div></pre><div class="info">
-Monad instance requires Semigroup to combine Left values
+<pre><span id="MODULEMake"><span class="keyword">module</span> <a href="These.Make.html">Make</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">S</code><code class="code"> : </code><code class="type"><a href="Semigroup.S.html">Semigroup.S</a></code><code class="code">) -&gt; </code><code class="type"><a href="Monad.S.html">Monad.S</a></code><code class="type">  with type 'a t = (S.t, 'a) t</code></div></pre><div class="info">
+<p>Monad instance requires Semigroup to combine Left values</p>
+
 </div>
 
 <pre><span id="VALbimap"><span class="keyword">val</span> bimap</span> : <code class="type">('a -> 'b) -> ('c -> 'd) -> ('a, 'c) <a href="These.html#TYPEt">t</a> -> ('b, 'd) <a href="These.html#TYPEt">t</a></code></pre>

@@ -41,17 +41,19 @@
 </div>
 <h1>Module <a href="type_Semigroup.html">Semigroup</a></h1>
 
-<pre><span class="keyword">module</span> Semigroup: <code class="code">sig</code> <a href="Semigroup.html">..</a> <code class="code">end</code></pre><div class="info module top">
-Semigroups<br>
+<pre><span id="MODULESemigroup"><span class="keyword">module</span> Semigroup</span>: <code class="code">sig</code> <a href="Semigroup.html">..</a> <code class="code">end</code></pre><div class="info module top">
+<div class="info-desc">
+<p>Semigroups</p>
+</div>
 </div>
 <hr width="100%">
 
-<pre><span class="keyword">module type</span> <a href="Semigroup.S.html">S</a> = <code class="code">sig</code> <a href="Semigroup.S.html">..</a> <code class="code">end</code></pre>
-<pre><span class="keyword">module</span> <a href="Semigroup.First.html">First</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">T</code><code class="code"> : </code><code class="code">sig</code><div class="sig_block">
+<pre><span id="MODULETYPES"><span class="keyword">module type</span> <a href="Semigroup.S.html">S</a></span> = <code class="code">sig</code> <a href="Semigroup.S.html">..</a> <code class="code">end</code></pre>
+<pre><span id="MODULEFirst"><span class="keyword">module</span> <a href="Semigroup.First.html">First</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">T</code><code class="code"> : </code><code class="code">sig</code></pre><div class="sig_block">
 <pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
 
-</div><code class="code">end</code><code class="code">) -&gt; </code><code class="type"><a href="Semigroup.S.html">S</a></code><code class="type">  with type t = T.t</code></div></pre>
-<pre><span class="keyword">module</span> <a href="Semigroup.Last.html">Last</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">T</code><code class="code"> : </code><code class="code">sig</code><div class="sig_block">
+</div><pre><code class="code">end</code><code class="code">) -&gt; </code><code class="type"><a href="Semigroup.S.html">S</a></code><code class="type">  with type t = T.t</code></div></pre>
+<pre><span id="MODULELast"><span class="keyword">module</span> <a href="Semigroup.Last.html">Last</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">T</code><code class="code"> : </code><code class="code">sig</code></pre><div class="sig_block">
 <pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
 
-</div><code class="code">end</code><code class="code">) -&gt; </code><code class="type"><a href="Semigroup.S.html">S</a></code><code class="type">  with type t = T.t</code></div></pre></body></html>
+</div><pre><code class="code">end</code><code class="code">) -&gt; </code><code class="type"><a href="Semigroup.S.html">S</a></code><code class="type">  with type t = T.t</code></div></pre></body></html>

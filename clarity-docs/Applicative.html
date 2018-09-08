@@ -41,17 +41,19 @@
 </div>
 <h1>Module <a href="type_Applicative.html">Applicative</a></h1>
 
-<pre><span class="keyword">module</span> Applicative: <code class="code">sig</code> <a href="Applicative.html">..</a> <code class="code">end</code></pre><div class="info module top">
-Applicative functors<br>
+<pre><span id="MODULEApplicative"><span class="keyword">module</span> Applicative</span>: <code class="code">sig</code> <a href="Applicative.html">..</a> <code class="code">end</code></pre><div class="info module top">
+<div class="info-desc">
+<p>Applicative functors</p>
+</div>
 </div>
 <hr width="100%">
 
-<pre><span class="keyword">module type</span> <a href="Applicative.Basic.html">Basic</a> = <code class="code">sig</code> <a href="Applicative.Basic.html">..</a> <code class="code">end</code></pre>
-<pre><span class="keyword">module type</span> <a href="Applicative.Basic2.html">Basic2</a> = <code class="code">sig</code> <a href="Applicative.Basic2.html">..</a> <code class="code">end</code></pre>
-<pre><span class="keyword">module type</span> <a href="Applicative.Basic3.html">Basic3</a> = <code class="code">sig</code> <a href="Applicative.Basic3.html">..</a> <code class="code">end</code></pre>
-<pre><span class="keyword">module type</span> <a href="Applicative.S.html">S</a> = <code class="code">sig</code> <a href="Applicative.S.html">..</a> <code class="code">end</code></pre>
-<pre><span class="keyword">module type</span> <a href="Applicative.S2.html">S2</a> = <code class="code">sig</code> <a href="Applicative.S2.html">..</a> <code class="code">end</code></pre>
-<pre><span class="keyword">module type</span> <a href="Applicative.S3.html">S3</a> = <code class="code">sig</code> <a href="Applicative.S3.html">..</a> <code class="code">end</code></pre>
-<pre><span class="keyword">module</span> <a href="Applicative.Make.html">Make</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic.html">Basic</a></code><code class="code">) -&gt; </code><code class="type"><a href="Applicative.S.html">S</a></code><code class="type">  with type 'a t := 'a A.t</code></div></pre>
-<pre><span class="keyword">module</span> <a href="Applicative.Make2.html">Make2</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic2.html">Basic2</a></code><code class="code">) -&gt; </code><code class="type"><a href="Applicative.S2.html">S2</a></code><code class="type">  with type ('p, 'a) t := ('p, 'a) A.t</code></div></pre>
-<pre><span class="keyword">module</span> <a href="Applicative.Make3.html">Make3</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic3.html">Basic3</a></code><code class="code">) -&gt; </code><code class="type"><a href="Applicative.S3.html">S3</a></code><code class="type">  with type ('p, 'q, 'a) t := ('p, 'q, 'a) A.t</code></div></pre></body></html>
+<pre><span id="MODULETYPEBasic"><span class="keyword">module type</span> <a href="Applicative.Basic.html">Basic</a></span> = <code class="code">sig</code> <a href="Applicative.Basic.html">..</a> <code class="code">end</code></pre>
+<pre><span id="MODULETYPEBasic2"><span class="keyword">module type</span> <a href="Applicative.Basic2.html">Basic2</a></span> = <code class="code">sig</code> <a href="Applicative.Basic2.html">..</a> <code class="code">end</code></pre>
+<pre><span id="MODULETYPEBasic3"><span class="keyword">module type</span> <a href="Applicative.Basic3.html">Basic3</a></span> = <code class="code">sig</code> <a href="Applicative.Basic3.html">..</a> <code class="code">end</code></pre>
+<pre><span id="MODULETYPES"><span class="keyword">module type</span> <a href="Applicative.S.html">S</a></span> = <code class="code">sig</code> <a href="Applicative.S.html">..</a> <code class="code">end</code></pre>
+<pre><span id="MODULETYPES2"><span class="keyword">module type</span> <a href="Applicative.S2.html">S2</a></span> = <code class="code">sig</code> <a href="Applicative.S2.html">..</a> <code class="code">end</code></pre>
+<pre><span id="MODULETYPES3"><span class="keyword">module type</span> <a href="Applicative.S3.html">S3</a></span> = <code class="code">sig</code> <a href="Applicative.S3.html">..</a> <code class="code">end</code></pre>
+<pre><span id="MODULEMake"><span class="keyword">module</span> <a href="Applicative.Make.html">Make</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic.html">Basic</a></code><code class="code">) -&gt; </code><code class="type"><a href="Applicative.S.html">S</a></code><code class="type">  with type 'a t := 'a A.t</code></div></pre>
+<pre><span id="MODULEMake2"><span class="keyword">module</span> <a href="Applicative.Make2.html">Make2</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic2.html">Basic2</a></code><code class="code">) -&gt; </code><code class="type"><a href="Applicative.S2.html">S2</a></code><code class="type">  with type ('p, 'a) t := ('p, 'a) A.t</code></div></pre>
+<pre><span id="MODULEMake3"><span class="keyword">module</span> <a href="Applicative.Make3.html">Make3</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic3.html">Basic3</a></code><code class="code">) -&gt; </code><code class="type"><a href="Applicative.S3.html">S3</a></code><code class="type">  with type ('p, 'q, 'a) t := ('p, 'q, 'a) A.t</code></div></pre></body></html>

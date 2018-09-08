@@ -41,8 +41,10 @@
 </div>
 <h1>Module <a href="type_Clarity_list.html">Clarity_list</a></h1>
 
-<pre><span class="keyword">module</span> Clarity_list: <code class="code">sig</code> <a href="Clarity_list.html">..</a> <code class="code">end</code></pre><div class="info module top">
-List data type<br>
+<pre><span id="MODULEClarity_list"><span class="keyword">module</span> Clarity_list</span>: <code class="code">sig</code> <a href="Clarity_list.html">..</a> <code class="code">end</code></pre><div class="info module top">
+<div class="info-desc">
+<p>List data type</p>
+</div>
 </div>
 <hr width="100%">
 
@@ -62,8 +64,10 @@ List data type<br>
 <pre><span id="VALrev_map"><span class="keyword">val</span> rev_map</span> : <code class="type">('a -> 'b) -> 'a <a href="Clarity_list.html#TYPEt">t</a> -> 'b <a href="Clarity_list.html#TYPEt">t</a></code></pre>
 <pre><span id="VALrev_mapi"><span class="keyword">val</span> rev_mapi</span> : <code class="type">(int -> 'a -> 'b) -> 'a <a href="Clarity_list.html#TYPEt">t</a> -> 'b <a href="Clarity_list.html#TYPEt">t</a></code></pre>
 <pre><span id="VALsort"><span class="keyword">val</span> sort</span> : <code class="type">?cmp:('a -> 'a -> int) -> 'a <a href="Clarity_list.html#TYPEt">t</a> -> 'a <a href="Clarity_list.html#TYPEt">t</a></code></pre><div class="info ">
-Stable sort with supplied comparision function, default is
-  Pervasives.compare<br>
+<div class="info-desc">
+<p>Stable sort with supplied comparision function, default is
+  Pervasives.compare</p>
+</div>
 </div>
 
 <pre><span class="keyword">include</span> <a href="Monad.S.html">Monad.S</a></pre>
@@ -72,15 +76,15 @@ Stable sort with supplied comparision function, default is
 
 <pre><span class="keyword">include</span> <a href="Align.S.html">Align.S</a></pre>
 
-<pre><span class="keyword">module</span> <a href="Clarity_list.A.html">A</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic.html">Applicative.Basic</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S.html">Traversable.S</a></code><code class="type">  with
+<pre><span id="MODULEA"><span class="keyword">module</span> <a href="Clarity_list.A.html">A</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic.html">Applicative.Basic</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S.html">Traversable.S</a></code><code class="type">  with
   type 'a t := 'a t and
   type 'a f := 'a A.t</code></div></pre>
-<pre><span class="keyword">module</span> <a href="Clarity_list.A2.html">A2</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic2.html">Applicative.Basic2</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S2.html">Traversable.S2</a></code><code class="type">  with
+<pre><span id="MODULEA2"><span class="keyword">module</span> <a href="Clarity_list.A2.html">A2</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic2.html">Applicative.Basic2</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S2.html">Traversable.S2</a></code><code class="type">  with
   type 'a t := 'a t and
   type ('u, 'a) f := ('u, 'a) A.t</code></div></pre>
-<pre><span class="keyword">module</span> <a href="Clarity_list.A3.html">A3</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic3.html">Applicative.Basic3</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S3.html">Traversable.S3</a></code><code class="type">  with
+<pre><span id="MODULEA3"><span class="keyword">module</span> <a href="Clarity_list.A3.html">A3</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">A</code><code class="code"> : </code><code class="type"><a href="Applicative.Basic3.html">Applicative.Basic3</a></code><code class="code">) -&gt; </code><code class="type"><a href="Traversable.S3.html">Traversable.S3</a></code><code class="type">  with
   type 'a t := 'a t and
   type ('u, 'v, 'a) f := ('u, 'v, 'a) A.t</code></div></pre>
-<pre><span class="keyword">module</span> <a href="Clarity_list.M.html">M</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic.html">Monad.Basic</a></code><code class="code">) -&gt; </code><code class="code">sig</code> <a href="Clarity_list.M.html">..</a> <code class="code">end</code></div></pre>
-<pre><span class="keyword">module</span> <a href="Clarity_list.M2.html">M2</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic2.html">Monad.Basic2</a></code><code class="code">) -&gt; </code><code class="code">sig</code> <a href="Clarity_list.M2.html">..</a> <code class="code">end</code></div></pre>
-<pre><span class="keyword">module</span> <a href="Clarity_list.M3.html">M3</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic3.html">Monad.Basic3</a></code><code class="code">) -&gt; </code><code class="code">sig</code> <a href="Clarity_list.M3.html">..</a> <code class="code">end</code></div></pre></body></html>
+<pre><span id="MODULEM"><span class="keyword">module</span> <a href="Clarity_list.M.html">M</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic.html">Monad.Basic</a></code><code class="code">) -&gt; </code><code class="code">sig</code> <a href="Clarity_list.M.html">..</a> <code class="code">end</code></div></pre>
+<pre><span id="MODULEM2"><span class="keyword">module</span> <a href="Clarity_list.M2.html">M2</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic2.html">Monad.Basic2</a></code><code class="code">) -&gt; </code><code class="code">sig</code> <a href="Clarity_list.M2.html">..</a> <code class="code">end</code></div></pre>
+<pre><span id="MODULEM3"><span class="keyword">module</span> <a href="Clarity_list.M3.html">M3</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">M</code><code class="code"> : </code><code class="type"><a href="Monad.Basic3.html">Monad.Basic3</a></code><code class="code">) -&gt; </code><code class="code">sig</code> <a href="Clarity_list.M3.html">..</a> <code class="code">end</code></div></pre></body></html>

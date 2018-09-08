@@ -41,17 +41,19 @@
 </div>
 <h1>Module <a href="type_Functor.html">Functor</a></h1>
 
-<pre><span class="keyword">module</span> Functor: <code class="code">sig</code> <a href="Functor.html">..</a> <code class="code">end</code></pre><div class="info module top">
-Functors<br>
+<pre><span id="MODULEFunctor"><span class="keyword">module</span> Functor</span>: <code class="code">sig</code> <a href="Functor.html">..</a> <code class="code">end</code></pre><div class="info module top">
+<div class="info-desc">
+<p>Functors</p>
+</div>
 </div>
 <hr width="100%">
 
-<pre><span class="keyword">module type</span> <a href="Functor.Basic.html">Basic</a> = <code class="code">sig</code> <a href="Functor.Basic.html">..</a> <code class="code">end</code></pre>
-<pre><span class="keyword">module type</span> <a href="Functor.Basic2.html">Basic2</a> = <code class="code">sig</code> <a href="Functor.Basic2.html">..</a> <code class="code">end</code></pre>
-<pre><span class="keyword">module type</span> <a href="Functor.Basic3.html">Basic3</a> = <code class="code">sig</code> <a href="Functor.Basic3.html">..</a> <code class="code">end</code></pre>
-<pre><span class="keyword">module type</span> <a href="Functor.S.html">S</a> = <code class="code">sig</code> <a href="Functor.S.html">..</a> <code class="code">end</code></pre>
-<pre><span class="keyword">module type</span> <a href="Functor.S2.html">S2</a> = <code class="code">sig</code> <a href="Functor.S2.html">..</a> <code class="code">end</code></pre>
-<pre><span class="keyword">module type</span> <a href="Functor.S3.html">S3</a> = <code class="code">sig</code> <a href="Functor.S3.html">..</a> <code class="code">end</code></pre>
-<pre><span class="keyword">module</span> <a href="Functor.Make.html">Make</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">F</code><code class="code"> : </code><code class="type"><a href="Functor.Basic.html">Basic</a></code><code class="code">) -&gt; </code><code class="type"><a href="Functor.S.html">S</a></code><code class="type">  with type 'a t := 'a F.t</code></div></pre>
-<pre><span class="keyword">module</span> <a href="Functor.Make2.html">Make2</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">F</code><code class="code"> : </code><code class="type"><a href="Functor.Basic2.html">Basic2</a></code><code class="code">) -&gt; </code><code class="type"><a href="Functor.S2.html">S2</a></code><code class="type">  with type ('p, 'a) t := ('p, 'a) F.t</code></div></pre>
-<pre><span class="keyword">module</span> <a href="Functor.Make3.html">Make3</a>: <div class="sig_block"><code class="code">functor (</code><code class="code">F</code><code class="code"> : </code><code class="type"><a href="Functor.Basic3.html">Basic3</a></code><code class="code">) -&gt; </code><code class="type"><a href="Functor.S3.html">S3</a></code><code class="type">  with type ('p, 'q, 'a) t := ('p, 'q, 'a) F.t</code></div></pre></body></html>
+<pre><span id="MODULETYPEBasic"><span class="keyword">module type</span> <a href="Functor.Basic.html">Basic</a></span> = <code class="code">sig</code> <a href="Functor.Basic.html">..</a> <code class="code">end</code></pre>
+<pre><span id="MODULETYPEBasic2"><span class="keyword">module type</span> <a href="Functor.Basic2.html">Basic2</a></span> = <code class="code">sig</code> <a href="Functor.Basic2.html">..</a> <code class="code">end</code></pre>
+<pre><span id="MODULETYPEBasic3"><span class="keyword">module type</span> <a href="Functor.Basic3.html">Basic3</a></span> = <code class="code">sig</code> <a href="Functor.Basic3.html">..</a> <code class="code">end</code></pre>
+<pre><span id="MODULETYPES"><span class="keyword">module type</span> <a href="Functor.S.html">S</a></span> = <code class="code">sig</code> <a href="Functor.S.html">..</a> <code class="code">end</code></pre>
+<pre><span id="MODULETYPES2"><span class="keyword">module type</span> <a href="Functor.S2.html">S2</a></span> = <code class="code">sig</code> <a href="Functor.S2.html">..</a> <code class="code">end</code></pre>
+<pre><span id="MODULETYPES3"><span class="keyword">module type</span> <a href="Functor.S3.html">S3</a></span> = <code class="code">sig</code> <a href="Functor.S3.html">..</a> <code class="code">end</code></pre>
+<pre><span id="MODULEMake"><span class="keyword">module</span> <a href="Functor.Make.html">Make</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">F</code><code class="code"> : </code><code class="type"><a href="Functor.Basic.html">Basic</a></code><code class="code">) -&gt; </code><code class="type"><a href="Functor.S.html">S</a></code><code class="type">  with type 'a t := 'a F.t</code></div></pre>
+<pre><span id="MODULEMake2"><span class="keyword">module</span> <a href="Functor.Make2.html">Make2</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">F</code><code class="code"> : </code><code class="type"><a href="Functor.Basic2.html">Basic2</a></code><code class="code">) -&gt; </code><code class="type"><a href="Functor.S2.html">S2</a></code><code class="type">  with type ('p, 'a) t := ('p, 'a) F.t</code></div></pre>
+<pre><span id="MODULEMake3"><span class="keyword">module</span> <a href="Functor.Make3.html">Make3</a></span>: <div class="sig_block"><code class="code">functor (</code><code class="code">F</code><code class="code"> : </code><code class="type"><a href="Functor.Basic3.html">Basic3</a></code><code class="code">) -&gt; </code><code class="type"><a href="Functor.S3.html">S3</a></code><code class="type">  with type ('p, 'q, 'a) t := ('p, 'q, 'a) F.t</code></div></pre></body></html>
